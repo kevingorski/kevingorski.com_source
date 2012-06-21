@@ -18,11 +18,7 @@
 
     eCSSential({
       "all": "css/all.css"
-      // ,
-      // "(min-width: 20em)": "css/min-20em.css",
-      // "(min-width: 37.5em)": "css/min-37.5em.css",
-      // "(min-width: 50em)": "css/min-50em.css",
-      // "(min-width: 62.5em)": "css/min-62.5em.css"
+      // , "(min-width: 20em)": "css/min-20em.css"
     }
     // Specify that IE 6-8 get all CSS files, despite their lack of media query support
     // Afterwards, Respond.js is included below to provide the media query polyfill
@@ -42,16 +38,64 @@
 </head>
 <body>
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+  <!-- NOTE: This will be different on articles -->
   <header>
+    <div id="Profile">img</div>
     <h1>Kevin Gorski</h1>
     <h2>Between the Lines</h2>
+    <ul>
+      <li>Twitter</li>
+      <li>Email</li>
+      <li>StackOverflow</li>
+      <li>GitHub</li>
+      <li>Code Shelver</li>
+      <li>Rdio</li>
+      <li>Last.fm</li>
+      <li>Forkly</li>
+      <li>Coder Wall</li>
+      <li>LinkedIn</li>
+      <li>Svpply</li>
+      <li>Pinboard</li>
+      <li>Instapaper</li>
+    </ul>
   </header>
 
   <div role="main">
-
     <p>Once chance to be interesting and <em>you blew it</em>.</p>
 
+    <p>Blurb about who I am &amp; what this is.</p>
   </div>
+
+  <section>
+     <h1>What I&rsquo;ve Made</h1>
+
+     <ul>
+      <li>
+        <div class="ProjectImage"></div>
+        <h2>Can You Read It Now?</h2>
+        <p>
+          The pitch, maybe some tech details.
+        </p>
+      </li>
+
+      <li>
+        <div class="ProjectImage"></div>
+        <h2>Periodic Growth</h2>
+        <p>
+          Can learning related but separate disciplines be done in a better way?
+        </p>
+      </li>
+
+      <li>
+        <div class="ProjectImage"></div>
+        <h2>Concert Posters: Yellow Ostrich</h2>
+        <p>
+          I made these because I&rsquo;m infatuated with the music and I saw them live...
+        </p>
+      </li>
+    </ul>
+  </section>
 
   <footer>
     <p>Maybe you&rsquo;ll have more luck elsewhere?</p>
@@ -65,5 +109,20 @@
   <script src="js/script.js"></script>
   <!-- end scripts -->
 
+  <!-- TODO: Dev only! -->
+  <script type="text/javascript">
+    (function(){
+    if (typeof window.__vogue__!=='undefined') return;
+    window.__vogue__ = {
+    rootUrl:'http://localhost:8001/',
+    domain:'localhost',
+    port:8001
+    };
+    var s = document.createElement('script');
+    s.setAttribute('src', 'http://localhost:8001/vogue-client.js');
+    s.setAttribute('type', 'text/javascript');
+    document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  </script>
 </body>
 </html>
