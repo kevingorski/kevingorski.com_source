@@ -1,4 +1,3 @@
 #!/bin/bash
 
-kill `cat vogue.pid`
-kill `cat serve.pid`
+kill `cat ws.pid`

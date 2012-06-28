@@ -1,7 +1,4 @@
 #!/bin/bash
 
-vogue . &
-echo $! > vogue.pid
-
-serve . &
-echo $! > serve.pid
+wintersmith preview -p 3000 &
+echo $! > ws.pid
