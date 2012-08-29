@@ -1,3 +1,4 @@
 *.pid
 *sublime*
 build/
+.DS_Store
