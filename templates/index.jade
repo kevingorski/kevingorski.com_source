@@ -19,10 +19,25 @@ block content
       | Outside of my day job, I learn about software, design, art, &amp; more. 
       | Here&rsquo;s a selection of what I&rsquo;ve made with that knowledge:
 
-  //- TODO: pointers:
-  //-   most recent works / more
-  //-   projects / more
-  //-   resume… behind some kind of puzzle?
+  - var articles = _.chain(contents.articles._.directories).map(function(item) {
+  -       return item.index
+  -     }).compact().sortBy(function(item) { 
+  -       return -item.date
+  -     }).first(1).value()
+  each article in articles
+    article.post
+      header
+        h2
+          a(href=article.url)= article.title
+        p
+          mixin author(article.metadata.author)
+      section.content!= article.intro
+      if article.hasMore
+        p.read-more
+          a(href=article.url)
+            | Continue reading 
+            em= article.title
+  a(href='archive.html')#archive More to read
 
   section
     h1 What I&rsquo;ve Made
@@ -40,21 +55,3 @@ block content
         .ProjectImage
         h2 Concert Posters: Yellow Ostrich
         p I made these because I&rsquo;m infatuated with the music and I saw them live...
-
-  - var articles = _.chain(contents.articles._.directories).map(function(item) {
-  -       return item.index
-  -     }).compact().sortBy(function(item) { 
-  -       return -item.date
-  -     }).first(1).value()
-  each article in articles
-    article.post
-      header
-        h2
-          a(href=article.url)= article.title
-        p
-          mixin author(article.metadata.author)
-      section.content!= article.intro
-      if article.hasMore
-        p.read-more
-          a(href=article.url) read more
-  a(href='archive.html')#archive Visit the archives!

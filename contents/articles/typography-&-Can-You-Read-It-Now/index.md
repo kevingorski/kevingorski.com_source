@@ -1,4 +1,4 @@
-title: Typography & Can You Read It Now
+title: Typography & Can You Read It Now?
 author: Kevin Gorski
 date: 2012-08-29 08:21
 template: article.jade

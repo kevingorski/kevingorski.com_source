@@ -6,12 +6,17 @@ block prepend title
 
 block header
   include author
-  a.back(href='/') << back to index
   h1= page.title
   p
-    | written by:
+    | by 
     mixin author(page.metadata.author)
 
 block content
   article.post
     section.content!= page.html
+
+block footer
+  p
+    a.back(href='/') Home
+    |  &middot; 
+    a(href='/archive.html') Archive
