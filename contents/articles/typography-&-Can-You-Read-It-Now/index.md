@@ -3,8 +3,6 @@ author: Kevin Gorski
 date: 2012-08-29 08:21
 template: article.jade
 
-# Typography & Can You Read It Now?
-
 Typography can be a subtle art. It's in front of us all day in one form or another, but it often takes extreme examples of high- or low-quality typography to [spur](http://www.typographydeconstructed.com/spur/) us to think – or even *care* – about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This can be both enthralling and maddening.
 
 ## Productive Frustration
@@ -19,7 +17,7 @@ A better way is to make it easy to tell if your text on the Web is *readable eno
 
 ## So I Made A Thing
 
-When I started working on [Can You Read It Now](http://canyoureaditnow.com] (CYRIN), I was in the same situation as a lot of people: I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one without this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the CYRIN [bookmarklet](http://en.wikipedia.org/wiki/Bookmarklet).
+When I started working on [Can You Read It Now](http://canyoureaditnow.com) (CYRIN), I was in the same situation as a lot of people: I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one without this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the CYRIN [bookmarklet](http://en.wikipedia.org/wiki/Bookmarklet).
 
 The source for a lot of the ratings are the W3C's [Web Content Accessibility Guidelines](http://www.w3.org/WAI/intro/wcag.php), which are focused on making content that is accessible to as many people as possible. Some of the guidelines include formulas for calculating how readable or not text will be, others are more abstract. I've used the formulae where possible and tried to make clear ratings based on that guidance or personal preference everywhere else. In CYRIN higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you're not targeting low-visibility visitors.
 
