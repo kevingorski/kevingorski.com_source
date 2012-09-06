@@ -1,9 +1,8 @@
 title: Humble Beginnings
 author: Kevin Gorski
-date: 2012-08-29 08:00 
+date: 2012-09-09 12:00
 template: article.jade
 
-# Humble Beginnings
 Here I am again, trying to restart my writing habit. Most recently I've [publicly written about](http://nodenerd.net) a specific [software technology](http://nodejs.org), but here I want to cover a wider array of topics. I'll still cover code and software architecture, but also typography and more abstract writing like essays and opinion pieces.
 
 In addition to quality content, I want this site to stand as a good example of responsive site design and type setting. I've been entertaining the idea of creating a style for each article, but for now I think it's best if I focus on the words and the code.

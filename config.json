@@ -6,6 +6,9 @@
     "description": "Kevin Gorski creates &amp; writes about software",
     "index_articles": 3
   },
+  "require": [
+    "./node_modules/moment"
+  ],
   "plugins": [
     "wintersmith-stylus"
   ]

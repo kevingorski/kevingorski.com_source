@@ -5,15 +5,11 @@ extends layout
 block prepend title
   !{page.title} - 
 
-block header
-  include author
-  h1= page.title
-  p
-    | by 
-    mixin author(page.metadata.author)
-
 block content
+  include author
   article.post
+    h1= page.title
+    time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
     section.content!= page.html
 
 block footer

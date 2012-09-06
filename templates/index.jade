@@ -1,7 +1,6 @@
 extends layout
 
 block header
-  #Profile img
   h1 Kevin Gorski
   h2 Creative software developer in Denver, CO
 
@@ -17,7 +16,6 @@ block content
       | , &amp; JavaScript). 
     p 
       | Outside of my day job, I learn about software, design, art, &amp; more. 
-      | Here&rsquo;s a selection of what I&rsquo;ve made with that knowledge:
 
   - var articles = _.chain(contents.articles._.directories).map(function(item) {
   -       return item.index
@@ -38,20 +36,3 @@ block content
             | Continue reading 
             em= article.title
   a(href='archive.html')#archive More to read
-
-  section
-    h1 What I&rsquo;ve Made
-
-     ul
-      li.clearfix
-        .ProjectImage
-        h2 Can You Read It Now?
-        p The pitch, maybe some tech details.
-      li.clearfix
-        .ProjectImage
-        h2 Periodic Growth
-        p Can learning related but separate disciplines be done in a better way?
-      li.clearfix
-        .ProjectImage
-        h2 Concert Posters: Yellow Ostrich
-        p I made these because I&rsquo;m infatuated with the music and I saw them live...

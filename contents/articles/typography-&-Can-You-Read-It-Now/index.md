@@ -1,6 +1,6 @@
 title: Typography & Can You Read It Now?
-author: Kevin Gorski
-date: 2012-08-29 08:21
+author: kevingorski
+date: 2012-09-12 12:00
 template: article.jade
 
 Typography can be a subtle art. It's in front of us all day in one form or another, but it often takes extreme examples of high- or low-quality typography to [spur](http://www.typographydeconstructed.com/spur/) us to think – or even *care* – about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This can be both enthralling and maddening.
@@ -14,6 +14,15 @@ For non-technical content, there are work-arounds for this problem: use [Instapa
 One way to solve this might be to make affordances in the tools I mentioned for reading code, but I (and probably you) have no control over that, and it's probably more work than it would be worth to the percentage of their audience that has this minor problem.
 
 A better way is to make it easy to tell if your text on the Web is *readable enough* or not, and concrete ways to improve its readability. Hopefully with this guidance all of the text in these articles can be made readable enough that a separate tool isn't needed.
+
+```javascript
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+```
 
 ## So I Made A Thing
 
