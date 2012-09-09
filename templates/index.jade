@@ -1,38 +1,41 @@
 extends layout
 
-block header
-  h1 Kevin Gorski
-  h2 Creative software developer in Denver, CO
 
 block content
-  include author
+  header
+    h1 Kevin Gorski
+    h2 Creative software developer in Denver, CO
 
   section#intro
     p
-      | I build software all day &mdash; usually with the .NET stack, Node.js or entirely within the browser (
-      abbr HTML
+      | I build software all day &mdash; usually with the .NET stack, 
+      a(href="http://nodejs.org/") Node.js
+      |  or entirely within the browser (with 
+      abbr(title="HyperText Markup Language") HTML
       | , 
-      abbr CSS
+      abbr(title="Cascading Style Sheets") CSS
       | , &amp; JavaScript). 
     p 
-      | Outside of my day job, I learn about software, design, art, &amp; more. 
+      | Outside of my day job, I learn about software, design, art &amp; more. 
 
-  - var articles = _.chain(contents.articles._.directories).map(function(item) {
-  -       return item.index
-  -     }).compact().sortBy(function(item) { 
-  -       return -item.date
-  -     }).first(1).value()
-  each article in articles
-    article.post
-      header
-        h2
-          a(href=article.url)= article.title
-        p
-          mixin author(article.metadata.author)
-      section.content!= article.intro
-      if article.hasMore
-        p.read-more
-          a(href=article.url)
-            | Continue reading 
-            em= article.title
-  a(href='archive.html')#archive More to read
+  section#writing
+    h1 Writing
+    p Thoughts &amp; ideas at once in motion and static. The latest result:
+
+    - var articles = _.chain(contents.articles._.directories).map(function(item) {
+    -       return item.index
+    -     }).compact().sortBy(function(item) { 
+    -       return -item.date
+    -     }).first(1).value()
+    each article in articles
+      article.summary
+          h1
+            a(href=article.url)= article.title
+        section.content!= article.intro
+        if article.hasMore
+          p.read-more
+            a(href=article.url)
+              | Continue reading
+
+block footer
+  a(href='/archive.html') More Articles

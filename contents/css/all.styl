@@ -39,10 +39,18 @@ h1
 article.post h1
   margin-bottom 0
 
-h2
+#metadata
+  display block
+  font-size 13px
+  margin-bottom 3em
+
+h2, section#writing h1
   font-size 25px
   line-height 2em
   margin 0.5em 0 0
+
+section#writing article.summary h1
+  font-size 20px
 
 p
   font-size 16px
@@ -52,48 +60,57 @@ p
 p + p
   text-indent 1.4em
 
-time.publishDate
-  display block
-  font-size 13px
-  margin-bottom 1em
+dl, menu, ol, ul
+  padding-left 1.4em
 
+.center > footer
+  border-top thin solid rgb(225, 225, 225)
+  margin-top 1em
+  padding 3em 0 5em
+  text-align center
 
-// Medium Scale 481-800px wide
+// Medium Scale 616-800px wide
 // Room enough for variety, but not full grid
 // Also adjusts baseline for Roomy
 // 18 => 800, 640, 512, 410, 320, 262, 210, 168, 134, 107, 86, 70, 55, 44, 35, 28, 22, 14, 12
-MediumColumns = 6
+MediumColumns = 8
 
-@media screen and (min-width: 481px)
-  header, #content, footer
+@media screen and (min-width: 620px)
+  div.center
+    width MediumColumns*(column-width + gutter-width) px
+
+  #content, footer
     column (MediumColumns)
 
-  div.center
-    width MediumColumns*(column-width+gutter-width) px
-
   h1
-    font-size 35px
+    font-size 55px
+    word-spacing -3px
 
-  h2
+  h2, section#writing h1
+    font-size 30px
+    word-spacing -2px
+
+  section#writing article.summary h1
     font-size 22px
 
-  p
+  body, p
     font-size 18px
 
   time.publishDate
     font-size 14px
 
 
+
 // Roomy Scale (also 18)
 RoomyColumns = 10
 
 @media screen and (min-width: 800px)
-
   div.center
-    width RoomyColumns*(column-width+gutter-width) px
+    width RoomyColumns*(column-width + gutter-width) px
 
-  header, #content, footer
-    column (RoomyColumns)
+  #content, footer
+    column (8)
+    push (1)
 
 
 /*
@@ -105,9 +122,9 @@ RoomyColumns = 10
 h1, h2
   font-style italic
   font-weight 300
-  font-family "skolar", serif
+  font-family Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif
   letter-spacing 0
-  color rgba(90, 90, 90, 1.00)
+  color rgb(90, 90, 90)
   -moz-font-feature-settings 'liga=1'
   -ms-font-feature-settings 'liga' 1
   -webkit-font-feature-settings 'liga' 1
@@ -115,11 +132,22 @@ h1, h2
   font-feature-settings 'liga' 1
   text-rendering optimizeLegibility
 
-p, time, li, div
-  font-family "prenton", sans-serif
+.wf-loading
+  p, time, li, div, li span
+    visibility: hidden
+
+.wf-active
+  p, time, li, div, li span
+    font-family "prenton"
+
+.wf-inactive
+  p, time, li, div, li span
+    font-family Verdana, "DejaVu Sans", sans-serif
+
+p, time, li, div, li span
   font-style normal
   font-weight 300
-  color rgba(70, 70, 70, 1.00)
+  color rgb(70, 70, 70)
   -moz-font-feature-settings 'liga=1'
   -ms-font-feature-settings 'liga' 1
   -webkit-font-feature-settings 'liga' 1
@@ -128,6 +156,52 @@ p, time, li, div
 
 #author, time.publishDate
   font-style italic
+
+a, a:link, a:visited
+  color rgb(30, 30, 225)
+  -webkit-transition color 0.25s ease-in-out
+  transition color 0.25s ease-in-out
+
+a:hover
+  color rgb(200, 30, 30)
+
+a:active
+  color rgb(200, 100, 100)
+
+ol, ul
+  list-style-position outside
+
+li
+  color rgb(120, 120, 120)
+
+abbr[title]
+  border none
+  text-decoration underline
+  font-family "ff-basic-gothic-sc-web-pro",sans-serif
+  font-style normal
+  font-weight 200
+  text-transform lowercase
+
+section.archive
+  margin-top 1em
+  ol
+    list-style none
+    padding 0
+    row(8)
+
+    .year
+      column(1, 8)
+
+    ol.articles
+      push(1)
+      column(7)
+
+    time.publishDate
+      column(2)
+      font-size 1em
+
+    a
+      display block
 
 blockquote
   font-family georgia, serif

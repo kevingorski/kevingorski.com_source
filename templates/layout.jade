@@ -13,35 +13,8 @@ html(class='no-js', lang='en')
 
       script(src="/js/libs/modernizr-2.5.3.min.js")
       link(rel="stylesheet", href="/css/all.css")
+      script /* A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT / GPLv2 License. */ (function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this);
       script
-        /*! A fix for the iOS orientationchange zoom bug. Script by @scottjehl, rebound by @wilto.MIT / GPLv2 License.*/(function(a){function m(){d.setAttribute("content",g),h=!0}function n(){d.setAttribute("content",f),h=!1}function o(b){l=b.accelerationIncludingGravity,i=Math.abs(l.x),j=Math.abs(l.y),k=Math.abs(l.z),(!a.orientation||a.orientation===180)&&(i>7||(k>6&&j<8||k<8&&j>6)&&i>5)?h&&n():h||m()}var b=navigator.userAgent;if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&/OS [1-5]_[0-9_]* like Mac OS X/i.test(b)&&b.indexOf("AppleWebKit")>-1))return;var c=a.document;if(!c.querySelector)return;var d=c.querySelector("meta[name=viewport]"),e=d&&d.getAttribute("content"),f=e+",maximum-scale=1",g=e+",maximum-scale=10",h=!0,i,j,k,l;if(!d)return;a.addEventListener("orientationchange",m,!1),a.addEventListener("devicemotion",o,!1)})(this); 
-
-        /*! eCSSential - v0.1.0 - 2012-06-08
-        * https://github.com/scottjehl/eCSSential
-        * Copyright (c) 2012 Scott Jehl, @scottjehl, Filament Group, Inc.; Licensed GPL, MIT; Includes matchMedia.js: http://j.mp/jay3wJ (MIT)  */
-        /*window.matchMedia=window.matchMedia||function(a,b){var c,d=a.documentElement,e=d.firstElementChild||d.firstChild,f=a.createElement("body"),g=a.createElement("div");return g.id="mq-test-1",g.style.cssText="position:absolute;top:-100em",f.style.background="none",f.appendChild(g),function(a){return g.innerHTML='&shy;<style media="'+a+'"> #mq-test-1 { width: 42px; }</style>',d.insertBefore(f,e),c=g.offsetWidth===42,d.removeChild(f),{matches:c,media:a}}}(document),window.eCSSential=function(a,b){function o(a){var b=a===c?'<meta id="eCSS">':"",d='<link href="',e='" rel="stylesheet">',g=[],h=[];for(var i in a)a.hasOwnProperty(i)&&(g.push(a[i].href),h.push(a[i].href+'" media="'+a[i].mq));return f.concat?d+f.concat(g)+e+b:d+h.join('" '+e+d)+e+b}"use strict";var c=[],d=[],e=[],f=b||{},g=window,h=g.document,i=h.getElementsByTagName("script")[0],j=/(min|max)-(width|height)/gmi,k=g.navigator.appVersion.match(/MSIE ([678])\./)&&RegExp.$1,l=new RegExp("(IE"+k+")|(IE)","g");for(var m in a)if(a.hasOwnProperty(m)){var n=m.match(l);g.matchMedia(m).matches||k&&(f.oldIE||n&&n[1])?c.push({mq:f.oldIE||n?"all":m,href:a[m]}):!n&&(f.deferAll||!m.match(j)||g.matchMedia(m.replace(j,"$1-device-$2")).matches)&&d.push({mq:m,href:a[m]})}if(c.length){h.write(o(c)),i=h.getElementById("eCSS");var p=i.parentNode.getElementsByTagName("link");for(var q=0,r=p.length;q<r;q++)(function(a){var b=g.setTimeout(function(){var b=a.nextSibling;a.parentNode.removeChild(a),b.parentNode.insertBefore(a,b),e.push(a)},f.patience||8e3);a.onload=function(){clearTimeout(b)}})(p[q])}if(d.length){var s=h.createElement("div");s.innerHTML=o(d),i.parentNode.insertBefore(s,i)}return{css:a,config:b,block:c,defer:d,timedout:e}};
-
-        eCSSential({
-          "all": "/css/all.css"
-          // , "(min-width: 20em)": "/css/min-20em.css"
-        }
-        // Specify that IE 6-8 get all CSS files, despite their lack of media query support
-        // Afterwards, Respond.js is included below to provide the media query polyfill
-        , { oldIE: true });
-        */
-
-      noscript
-        link(rel="stylesheet", href="/css/all.css")
-        // link(rel="stylesheet", href="/css/min-37.5em.css")
-        link(rel="stylesheet", href="/css/min-50em.css")
-
-      <!-- include IE media query polyfill -->
-      //if lt IE 9
-        script(src="/js/libs/respond.min.js")
-
-      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-
-      script(type="text/javascript")
         (function() {
           var config = {
             kitId: 'cyf1blw',
@@ -49,22 +22,18 @@ html(class='no-js', lang='en')
           };
           var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
         })();
+
+      link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
   body
     //if lt IE 7
       p.chromeframe Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.
 
     .center
-      header
-        block header
-          h1
-            a(href=locals.url)= locals.name
-
       #content(role="main")
         block content
 
       footer
           block footer
-            p ※⇮
     
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
     script window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\\/script>')

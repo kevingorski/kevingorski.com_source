@@ -1,7 +1,14 @@
 
 extends layout
 
+block prepend title
+  !{"The Archives"} - 
+
+
 block content
+  header
+    h1 The Archives
+
   != page.html
   - var archive = _.chain(contents.articles._.directories).map(function(item) {
   -   return item.index
@@ -13,15 +20,17 @@ block content
   - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
   section.archive
-    ul
+    ol
       each year in _.chain(archive).keys().reverse().value()
-        li.year= year
         - var months = _.groupBy(archive[year], function(item) { return map[item.date.getMonth()] })
-        ul
-          each articles, month in months
-            li
-              strong= month
+        li
+          .year= year
+          ol.articles
+            each articles, month in months
               each article in articles
-                br
-                a(href=article.url)= article.title
+                li.clearfix.article
+                  time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do')
+                  a(href=article.url)= article.title
 
+block footer
+  a.back(href='/') Home

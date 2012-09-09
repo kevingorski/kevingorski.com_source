@@ -6,14 +6,17 @@ block prepend title
   !{page.title} - 
 
 block content
-  include author
   article.post
-    h1= page.title
-    time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
+    header
+      h1= page.title
+      #metadata
+        a#author(href="http://kevingorski.com") Kevin Gorski
+        |  &middot; 
+        time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
+
     section.content!= page.html
 
 block footer
-  p
-    a.back(href='/') Home
-    |  &middot; 
-    a(href='/archive.html') Archive
+  a.back(href='/') Home
+  |  &middot; 
+  a(href='/archive.html') Archive

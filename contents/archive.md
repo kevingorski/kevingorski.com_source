@@ -1,5 +1,3 @@
 template: archive.jade
 
-## The archives
-
-I guess maybe some text here?
+Everything I've written that's fit to print (to your screen).
