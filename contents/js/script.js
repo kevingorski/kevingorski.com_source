@@ -1,6 +1,6 @@
 $(function() {
 	// For styling bullet separate from text
-	$('.article li').wrapInner('<span />');
+	$('.post li').wrapInner('<span />');
 });
 
 

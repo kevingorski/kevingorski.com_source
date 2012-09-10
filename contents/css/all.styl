@@ -112,6 +112,8 @@ RoomyColumns = 10
     column (8)
     push (1)
 
+  // Columns man, maybe here
+  // .csscolumns
 
 /*
  
@@ -131,6 +133,10 @@ h1, h2
   -o-font-feature-settings 'liga' 1
   font-feature-settings 'liga' 1
   text-rendering optimizeLegibility
+
+  a, a:link, a:hover, a:active
+    text-rendering auto
+
 
 .wf-loading
   p, time, li, div, li span
@@ -203,16 +209,21 @@ section.archive
     a
       display block
 
-blockquote
-  font-family georgia, serif
+.center header
+  background-color rgb(235, 235, 235)
+
+.center footer
+  background-color rgb(200, 200, 200)
+
+blockquote, blockquote:before
+  font-weight 300
+  font-family Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif
   font-style italic
 
 blockquote:before
   content "\201C"
-  font-size 40px
-  margin-left -10px
-  font-family georgia, serif
-  color #eee
+  font-size 3em
+  margin-left -1em
 
 
 @import 'H5BP-Post.css'
