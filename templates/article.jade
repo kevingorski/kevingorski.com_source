@@ -10,8 +10,6 @@ block content
     header
       h1= page.title
       #metadata
-        a#author(href="http://kevingorski.com") Kevin Gorski
-        |  &middot; 
         time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
 
     section.content!= page.html
