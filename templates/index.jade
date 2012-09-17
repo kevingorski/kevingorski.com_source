@@ -23,7 +23,9 @@ block content
 
   section#writing
     h1 Writing
-    p Thoughts &amp; ideas at once in motion and static. Here&rsquo;s a preview of my latest article:
+    p 
+      | Here I try to regularly write in public. Sometimes the subject will be development related, sometimes not. 
+      | Here&rsquo;s the latest example:
 
     - var articles = _.chain(contents.articles._.directories).map(function(item) {
     -       return item.index
@@ -37,12 +39,21 @@ block content
         section.content
           time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do, YYYY')
           !{article.intro}
-
-    a(href='/archive.html') More writing &rArr;
+        p 
+          | &hellip;
+          br
+          a(href=article.url) Continue &rArr;
+    p
+      | Earlier articles are in   
+      a(href='/archive.html') the Archives
+      | .
 
   section#work
     h1 Projects &amp; Portfolio
-    p I&rsquo;ve built a lot of software for others and sometimes myself. This is the highlight reel.
+    p 
+      | I&rsquo;ve built a lot of software for others and sometimes myself. 
+      a(href='/projects-&-portfolio.html') This is the highlight reel
+      | .
 
 block footer
   p 

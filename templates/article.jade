@@ -1,12 +1,11 @@
 
 extends layout
 
-append head
-  link(rel="stylesheet", href="article.css")
-
-
 block prepend title
   !{page.title} - 
+
+append head
+  link(rel="stylesheet", href="article.css")
 
 block content
   article.post
@@ -16,8 +15,3 @@ block content
         time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
 
     section.content!= page.html
-
-block footer
-  a.back(href='/') Home
-  |  &middot; 
-  a(href='/archive.html') Archive

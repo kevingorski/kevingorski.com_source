@@ -1,5 +1,5 @@
 @import 'normalize.css'
-@import 'H5BP-Pre.css'
+@import 'H5BP.css'
 @import 'code.css'
 @import 'grid'
 
@@ -81,12 +81,10 @@ h2, #writing h1, #work h1
 
 #writing article.summary
   padding 0 1.4em
+  margin-bottom 1em
 
   h1
     font-size 20px
-
-  .content
-    margin-bottom 1em
 
 p, body > header h1
   font-size 16px
@@ -175,6 +173,12 @@ RoomyColumns = 10
 //       -moz-column-gap gutter-width
 //       column-count 2
 //       column-gap gutter-width
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+//        only screen and (min-resolution: 144dpi) {
+//     /* Style adjustments for high resolution devices */
+// }
+
 
 
 /*
@@ -274,6 +278,3 @@ blockquote:before
   content "\201C"
   font-size 3em
   margin-left -1em
-
-
-@import 'H5BP-Post.css'
