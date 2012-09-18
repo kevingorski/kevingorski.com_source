@@ -12,21 +12,27 @@ block content
     p
       | I build software all day &mdash; usually with the .NET stack, 
       a(href="http://nodejs.org/") Node.js
-      |  or entirely within the browser (with 
+      |  or entirely within the browser with 
       abbr(title="HyperText Markup Language") HTML
       | , 
       abbr(title="Cascading Style Sheets") CSS
-      |  &amp; JavaScript).
-    p Outside of my day job, I learn about software, design, art &amp; more. 
-    p Opinionated, insightful, tenacious. Entrepreneurial, in theory. Reasoned honesty and cooperation, innovative solutions in tough situations, articulate.
-
+      |  &amp; JavaScript. You can get a gist of what that&rsquo;s like from my 
+      a(href='/projects-&-portfolio.html') projects & portfolio
+      |  or my 
+      a(href="https://github.com/kevingorski") GitHub profile
+      | .
+    p 
+      | Outside of software development, I&rsquo;ve been studying user interface design & typography while listening to a lot of 
+      a(href="http://www.rdio.com/people/KevinGorski/") Rdio
+      | . I&rsquo;m interested in entrepreneurship as a way to change the world and perhaps have more control over my life and career, 
+      | but I haven&rsquo;t done much with that yet.
+    p
+      | Here I try to regularly write in public. Sometimes the subject will be development related, sometimes not. 
+      | If the publish date on this is more than two weeks old, please 
+      a(href='mailto:kevin.gorski@gmail.com') scold me for it
+      | :
 
   section#writing
-    h1 Writing
-    p 
-      | Here I try to regularly write in public. Sometimes the subject will be development related, sometimes not. 
-      | Here&rsquo;s the latest example:
-
     - var articles = _.chain(contents.articles._.directories).map(function(item) {
     -       return item.index
     -     }).compact().sortBy(function(item) { 
@@ -50,12 +56,6 @@ block content
       a(href='/feed.xml') subscribe to new articles
       | .
 
-  section#work
-    h1 Projects &amp; Portfolio
-    p 
-      | I&rsquo;ve built a lot of software for others and sometimes myself. 
-      a(href='/projects-&-portfolio.html') This is the highlight reel
-      | .
 
 block footer
   p 

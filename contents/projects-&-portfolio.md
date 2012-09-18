@@ -1,4 +1,5 @@
 template: projects-&-portfolio.jade
+exclude: portfolio
 
 Since getting my Computer Science degree in 2004, I've primarily been doing .NET web development at my day job, but I've been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [Node.js](http://nodejs.org) when there's a server component. Both platforms have their advantages, but I'm more interested in working with Node.
 
@@ -7,7 +8,7 @@ Here are some cherry-picked examples of projects I've worked on in the past that
 
 ## B-Cycle Admin Site & Infrastructure
 
-[B-Cycle](http://b-cycle.com] was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle rental system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
+[B-Cycle](http://b-cycle.com) was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle rental system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
 
 Bikes are rented and returned to kiosks by users with either a credit card or an RFID card that had been previously purchased. Kiosks contact a central server to confirm the user account, manage payment details, and track the rented equipment. The central server bridged the distributed kiosks and the administration website, which aggregated user, equipment, and system level data. By tracking the RFID tag for each bike, usage patterns and equipment location was used to coordinated maintenance and customer service efforts.
 
@@ -30,7 +31,7 @@ In addition to being the primary developer for most of the project, I was the te
 * ASP.NET WebForms
 * JavaScript and jQuery
 * Google Maps API
-* WCF for web services
+* <abbr title="Windows Communication Foundation">WCF</abbr> for web services
 * Advanced NHibernate & Fluent NHibernate
 * Autofac
 * CruiseControl.NET
