@@ -44,6 +44,30 @@ In addition to being the primary developer for most of the project, I was the te
 * Living in Denver, I'm constantly reminded of this project when passed by a B-Cycle or passing by a kiosk.
 
 
+## Lead Management System for HomeAway
+
+Why multiple systems? HomeAway purchased several different vacation rental companies and is now supporting them all. Some are web-based and some are desktop-based. As part of a larger initiative to provide functionality across these systems a small team was assembled to build the first of many distributed application modules that would integrate and add functionoality to each of these systems with minimal effort-per-system.
+Managing vacation rental inquiries, booking properties within multiple web-based systems
+
+LMS consists of a few parts:
+
+* A UI bootstrapped by a single JavaScript file which leverages jQuery and Knockout for AJAX and UI logic, respectively.
+* Shared .NET WebAPI service for the app UI
+* An end system-specific web service implementation that will be called from the top-level API to read and manipulate existing data
+* An email retreival and parsing daemon to associate the text in incoming messages with properties and people in the system
+
+### Technologies
+
+* jQuery, Knockout
+* .NET Web API
+* Entity Framework v5
+
+### My Favorite Parts
+
+* I wouldn't want to be working under a compressed timeline all the time, but there's nothing quite as galvanizing for a small team as a goal that seems on the edge of possible.
+* This was one of the most sophisticated and complete JavaScript-based UIs I've worked on. A lot of theory-based opinions were tested and proven one way or the other.
+
+
 ## Personnel Scheduling & Optimization Web Application
 
 This web application helps law clerks optimize the schedules of their personnel, where each employee and location has their own list of possible event types. The goals were to minimize each employee's travel during the day and suggest the best combination of person, time and location, optionally accepting user input for each variable. The system had to be aware of real-world travel data, so we used Google Maps for both calculating driving distances and times and generating a daily agenda for each user with driving directions.
