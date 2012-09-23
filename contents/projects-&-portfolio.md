@@ -68,29 +68,6 @@ LMS consists of a few parts:
 * This was one of the most sophisticated and complete JavaScript-based UIs I've worked on. A lot of theory-based opinions were tested and proven one way or the other.
 
 
-## Personnel Scheduling & Optimization Web Application
-
-This web application helps law clerks optimize the schedules of their personnel, where each employee and location has their own list of possible event types. The goals were to minimize each employee's travel during the day and suggest the best combination of person, time and location, optionally accepting user input for each variable. The system had to be aware of real-world travel data, so we used Google Maps for both calculating driving distances and times and generating a daily agenda for each user with driving directions.
-
-### My Role
-
-I primarily worked with the Google Maps and calendaring implementations, but I also provided feedback on the design of the optimization algorithm during the project and applied changes to the system as the requirements changed.
-
-### Technologies
-
-* ASP.NET WebForms
-* jQuery FullCalendar, customized for additional functionality
-* Google Maps
-* NHibernate & Fluent NHibernate
-* Autofac
-* CruiseControl.NET
-
-### My Favorite Parts
-
-* Working with a team that was deep into the theory behind what they were building and often had challenging discussions about the implementation that constantly improved it. 
-* Time and location are easy things to talk about, but complex to deal with in code and in a UI, so the investigation phase was intense and rewarding.
-
-
 ## Can You Read It Now?
 
 [Can You Read It Now](http://canyoureaditnow.com/) (or CYRIN) is a two-part project: an [open-source jQuery plug-in](https://github.com/kevingorski/CanYouReadItNow) for generating a numeric analysis of the visual readability of text and [a bookmarklet](http://canyoureaditnow.com/) to demonstrate it in action and help drive specific style changes. I wrote it to help me learn about typography, readability, and bookmarklets.
