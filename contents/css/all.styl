@@ -39,6 +39,12 @@ gutter-width = 12
  
   Size, Proportion & Positioning
 
+  3 level structure
+    window width, document width (centered), grid content
+
+    body > header, body > header .center, body > header .grid
+    etc.
+
 */
 
 
@@ -47,9 +53,9 @@ gutter-width = 12
 // 16 => 95, 76, 61, 49, 39, 32, 25, 20, 13, 10, 8
 
 .center
-  width 95%
+  width 80%
   margin 0 auto
-
+  clearfix()
 
 h1
   font-size 32px
@@ -62,12 +68,21 @@ header.home
   h2
     margin 0
 
+body > header h1.center
+  margin 1em auto
+
+#intro
+  padding-top 2em
+
+#content .grid
+  padding-bottom 2em
 
 article.post h1
   margin-bottom 0
 
 #profile
   float:right;
+  margin: 2.5em 0;
 
 #metadata, header.home h2
   display block
@@ -89,7 +104,7 @@ h3
   h1
     font-size 20px
 
-p, body > header h1
+p
   font-size 16px
   line-height 1.5em
   margin 0 
@@ -98,11 +113,9 @@ p + p
   text-indent 1.4em
 
 dl, menu, ol, ul
-  padding-left 1.4em
+  padding-left 0
 
-.center > footer
-  border-top thin solid rgb(225, 225, 225)
-  margin-top 2em
+body > footer
   padding 3em 0 5em
   text-align center
 
@@ -114,12 +127,14 @@ MediumColumns = 8
 
 @media screen and (min-width: 620px)
   .center
-    width MediumColumns*(column-width + gutter-width) px
+    width MediumColumns*(column-width + gutter-width) + 4*gutter-width px
 
-  h1.center a, #content, footer
+  .grid
     column (MediumColumns)
+    padding-left 2*gutter-width px
+    padding-right 2*gutter-width px
 
-  h1
+  h1, header.home h1
     font-size 55px
     word-spacing -3px
 
@@ -148,9 +163,9 @@ RoomyColumns = 10
   .center
     width RoomyColumns*(column-width + gutter-width) px
 
-  h1.center a, #content, footer
+  .grid
     column (8)
-    push (1)
+    pushpadding (1)
 
   .wf-inactive
     p, time, li, div, li span
@@ -266,11 +281,29 @@ section.archive
     a
       display block
 
+body
+  background-color rgb(50, 50, 50)
+
+#content, #content .center
+  background-color rgb(245, 245, 245)
+
 body > header
   background-color rgb(235, 235, 235)
 
-.center footer
-  // background-color rgb(200, 200, 200)
+body > footer 
+  p, .grid
+    color rgb(205, 205, 205)
+
+  a, a:link, a:visited
+    color rgb(90, 90, 255)
+    -webkit-transition color 0.25s ease-in-out
+    transition color 0.25s ease-in-out
+
+  a:hover
+    color rgb(200, 30, 30)
+
+  a:active
+    color rgb(200, 100, 100)
 
 blockquote, blockquote:before
   font-weight 300

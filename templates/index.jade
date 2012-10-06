@@ -1,14 +1,15 @@
 extends layout
 
 block header
+  header.home.clearfix
+    .center
+      .grid
+        img(id="profile", src="profile.jpg", alt="Kevin Gorski", width=150, height=150)
+        h1 Kevin Gorski
+        h2 Software developer in Denver, CO
 
 block content
-  header.home
-    img(id="profile", src="profile.jpg", alt="Kevin Gorski", width=150, height=150)
-    h1 Kevin Gorski
-    h2 Software developer in Denver, CO
-
-  section
+  section#intro
     p
       | I build software all day &mdash; usually with the .NET stack, 
       a(href="http://nodejs.org/") Node.js

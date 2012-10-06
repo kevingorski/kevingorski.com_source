@@ -35,13 +35,16 @@ html(class='no-js', lang='en')
     block header
       header.clearfix
         h1.center
-          a(href="/") Kevin Gorski
+          a.grid(href="/") Kevin Gorski
 
-    .center
-      #content(role="main")
-        block content
+    #content(role="main").clearfix
+      .center
+        .grid
+          block content
 
-      footer
+    footer.clearfix
+      .center
+        .grid
           block footer
             a.back(href='/') Home
             |  &middot; 

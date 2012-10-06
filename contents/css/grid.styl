@@ -59,5 +59,8 @@ column(x, columns = columns)
 push(offset = 1)
 	margin-left total-width*(((gutter-width+column-width)*offset) / _gridsystem-width) + total-width*((gutter-width*0.5)/_gridsystem-width)
 
+pushpadding(offset = 1)
+	padding-left total-width*(((gutter-width+column-width)*offset) / _gridsystem-width) + total-width*((gutter-width*0.5)/_gridsystem-width) - gutter-width
+
 pull(offset = 1)
 	margin-right: total-width*(((gutter-width+column-width)*offset) / _gridsystem-width) + total-width*((gutter-width*0.5)/_gridsystem-width)
