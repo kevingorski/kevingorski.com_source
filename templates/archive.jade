@@ -28,6 +28,6 @@ block content
           ol.articles
             each articles, month in months
               each article in articles
-                li.clearfix.article
+                li.article
                   time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do')
                   a(href=article.url)= article.title

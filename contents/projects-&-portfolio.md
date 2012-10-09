@@ -8,17 +8,17 @@ Here are some cherry-picked examples of projects I've worked on in the past that
 
 ## B-Cycle Admin Site & Infrastructure
 
-[B-Cycle](http://b-cycle.com) was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle rental system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
+[B-Cycle](http://bcycle.com) was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle rental system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
 
 Bikes are rented and returned to kiosks by users with either a credit card or an RFID card that had been previously purchased. Kiosks contact a central server to confirm the user account, manage payment details, and track the rented equipment. The central server bridged the distributed kiosks and the administration website, which aggregated user, equipment, and system level data. By tracking the RFID tag for each bike, usage patterns and equipment location was used to coordinated maintenance and customer service efforts.
 
 The administration website included the usual create/update/delete pages, but there were also some unique features that made the system powerful:
 
-* Google Maps-based dashboard for geographic visualizations of near real-time data
-* Configurable and templated messaging/alert system through email or SMS with localized messages
-* Custom ticketing system based on user reports and maintenance schedules
-* Remote hardware monitoring and control systems
-* A public web service for supporting 1st and 3rd party mobile applications
+* <span>Google Maps-based dashboard for geographic visualizations of near real-time data</span>
+* <span>Configurable and templated messaging/alert system through email or SMS with localized messages</span>
+* <span>Custom ticketing system based on user reports and maintenance schedules</span>
+* <span>Remote hardware monitoring and control systems</span>
+* <span>A public web service for supporting 1st and 3rd party mobile applications</span>
 
 ### My Role
 
@@ -28,20 +28,20 @@ In addition to being the primary developer for most of the project, I was the te
 
 ### Technologies
 
-* ASP.NET WebForms
-* JavaScript and jQuery
-* Google Maps API
-* <abbr title="Windows Communication Foundation">WCF</abbr> for web services
-* Advanced NHibernate & Fluent NHibernate
-* Autofac
-* CruiseControl.NET
+* <span>ASP.NET WebForms</span>
+* <span>JavaScript and jQuery</span>
+* <span>Google Maps API</span>
+* <span><abbr title="Windows Communication Foundation">WCF</abbr> for web services</span>
+* <span>Advanced NHibernate & Fluent NHibernate</span>
+* <span>Autofac</span>
+* <span>CruiseControl.NET</span>
 
 ### My Favorite Parts
 
-* A feel-good overall goal for the product: more biking, less driving, better city living.
-* A great team that cared about the success and well-being of the project and had many productive and frank discussions that rooted out potential problems before they occurred.
-* Building a map of user activity and seeing it work made everything seem much more real than most projects.
-* Living in Denver, I'm constantly reminded of this project when passed by a B-Cycle or passing by a kiosk.
+* <span>A feel-good overall goal for the product: more biking, less driving, better city living.</span>
+* <span>A great team that cared about the success and well-being of the project and had many productive and frank discussions that rooted out potential problems before they occurred.</span>
+* <span>Building a map of user activity and seeing it work made everything seem much more real than most projects.</span>
+* <span>Living in Denver, I'm constantly reminded of this project when passed by a B-Cycle or passing by a kiosk.</span>
 
 
 ## Lead Management System for HomeAway
@@ -51,21 +51,21 @@ Managing vacation rental inquiries, booking properties within multiple web-based
 
 LMS consists of a few parts:
 
-* A UI bootstrapped by a single JavaScript file which leverages jQuery and Knockout for AJAX and UI logic, respectively.
-* Shared .NET WebAPI service for the app UI
-* An end system-specific web service implementation that will be called from the top-level API to read and manipulate existing data
-* An email retreival and parsing daemon to associate the text in incoming messages with properties and people in the system
+* <span>A UI bootstrapped by a single JavaScript file which leverages jQuery and Knockout for AJAX and UI logic, respectively.</span>
+* <span>Shared .NET WebAPI service for the app UI</span>
+* <span>An end system-specific web service implementation that will be called from the top-level API to read and manipulate existing data</span>
+* <span>An email retreival and parsing daemon to associate the text in incoming messages with properties and people in the system</span>
 
 ### Technologies
 
-* jQuery, Knockout
-* .NET Web API
-* Entity Framework v5
+* <span>jQuery, Knockout</span>
+* <span>.NET Web API</span>
+* <span>Entity Framework v5</span>
 
 ### My Favorite Parts
 
-* I wouldn't want to be working under a compressed timeline all the time, but there's nothing quite as galvanizing for a small team as a goal that seems on the edge of possible.
-* This was one of the most sophisticated and complete JavaScript-based UIs I've worked on. A lot of theory-based opinions were tested and proven one way or the other.
+* <span>I wouldn't want to be working under a compressed timeline all the time, but there's nothing quite as galvanizing for a small team as a goal that seems on the edge of possible.</span>
+* <span>This was one of the most sophisticated and complete JavaScript-based UIs I've worked on. A lot of theory-based opinions were tested and proven one way or the other.</span>
 
 
 ## Can You Read It Now?
@@ -74,16 +74,16 @@ LMS consists of a few parts:
 
 ### Technologies
 
-* jQuery
-* Jasmine for testing the core analysis library
-* Readability for finding the main content on a page
-* Node.js for the bookmarklet hosting site and feedback
+* <span>jQuery</span>
+* <span>Jasmine for testing the core analysis library</span>
+* <span>Readability for finding the main content on a page</span>
+* <span>Node.js for the bookmarklet hosting site and feedback</span>
 
 ### My Favorite Parts
 
-* It's a strange kind of fun evaluating specific pages for readability.
-* This was one of my first attempts at a non-trivial JavaScript code-base for both client and server. There's a lot I'd do differently now, but I learned a lot.
-* The design for the CYRIN homepage is less generic than most of my site designs end up being. Again, it could be better, but I don't hate it.
+* <span>It's a strange kind of fun evaluating specific pages for readability.</span>
+* <span>This was one of my first attempts at a non-trivial JavaScript code-base for both client and server. There's a lot I'd do differently now, but I learned a lot.</span>
+* <span>The design for the CYRIN homepage is less generic than most of my site designs end up being. Again, it could be better, but I don't hate it.</span>
 
 
 ## GitHub Commit Monitor

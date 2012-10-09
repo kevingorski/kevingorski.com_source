@@ -55,6 +55,8 @@ gutter-width = 12
 .center
   width 80%
   margin 0 auto
+
+.center, .grid
   clearfix()
 
 h1
@@ -81,8 +83,10 @@ article.post h1
   margin-bottom 0
 
 #profile
-  float:right;
-  margin: 2.5em 0;
+  height 75px
+  width 75px
+  float right
+  margin 2.25em 0
 
 #metadata, header.home h2
   display block
@@ -119,6 +123,26 @@ body > footer
   padding 3em 0 5em
   text-align center
 
+section.archive
+  margin-top 1em
+
+  ol
+    list-style none
+    padding 0
+
+    ol.articles
+      list-style disc
+
+    time.publishDate
+      font-size 1em
+      display none
+
+
+@media screen and (min-width: 450px)
+  section.archive ol time.publishDate
+    display inline
+    margin-right 0.5em
+
 // Medium Scale 616-800px wide
 // Room enough for variety, but not full grid
 // Also adjusts baseline for Roomy
@@ -127,16 +151,20 @@ MediumColumns = 8
 
 @media screen and (min-width: 620px)
   .center
-    width MediumColumns*(column-width + gutter-width) + 4*gutter-width px
+    width MediumColumns*(column-width + gutter-width) - 4*gutter-width px
 
   .grid
-    column (MediumColumns)
+    column (MediumColumns - 1) // getting extra space for padding
     padding-left 2*gutter-width px
     padding-right 2*gutter-width px
 
   h1, header.home h1
     font-size 55px
     word-spacing -3px
+
+  #profile
+    height 150px
+    width 150px
 
   #writing h1, #work h1, #mentor h1, h2
     font-size 30px
@@ -153,6 +181,23 @@ MediumColumns = 8
 
   time.publishDate
     font-size 14px
+
+  section.archive ol
+    row(6)
+
+    .year
+      column(1, 6)
+
+    ol.articles
+      push(1)
+      column(6)
+      list-style none
+
+    time.publishDate
+      column(2)
+
+    a
+      display block
 
 
 
@@ -171,7 +216,15 @@ RoomyColumns = 10
     p, time, li, div, li span
       font-size 17px
 
+  section.archive ol
+    row(8)
 
+    .year
+      column(1, 8)
+
+    ol.articles
+      push(1)
+      column(7)
 
 // Expansive Scale
 // ExpansiveColumns = 12
@@ -259,27 +312,6 @@ abbr[title]
   font-style normal
   font-weight 200
   text-transform lowercase
-
-section.archive
-  margin-top 1em
-  ol
-    list-style none
-    padding 0
-    row(8)
-
-    .year
-      column(1, 8)
-
-    ol.articles
-      push(1)
-      column(7)
-
-    time.publishDate
-      column(2)
-      font-size 1em
-
-    a
-      display block
 
 body
   background-color rgb(50, 50, 50)

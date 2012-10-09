@@ -46,15 +46,16 @@ html(class='no-js', lang='en')
       .center
         .grid
           block footer
-            a.back(href='/') Home
-            |  &middot; 
-            - if (!page.metadata.exclude || page.metadata.exclude.indexOf('archive') === -1)
-              a(href='/archive.html') The Archives
+            nav
+              a.back(href='/') Home
               |  &middot; 
-            - if (!page.metadata.exclude || page.metadata.exclude.indexOf('portfolio') === -1)
-              a(href='/projects-&-portfolio.html') Projects & Portfolio
-              |  &middot; 
-            a(href='/feed.xml') Articles RSS
+              - if (!page.metadata.exclude || page.metadata.exclude.indexOf('archive') === -1)
+                a(href='/archive.html') The&nbsp;Archives
+                |  &middot; 
+              - if (!page.metadata.exclude || page.metadata.exclude.indexOf('portfolio') === -1)
+                a(href='/projects-&-portfolio.html') Projects&nbsp;&amp;&nbsp;Portfolio
+                |  &middot; 
+              a(href='/feed.xml') Articles&nbsp;RSS
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
     script window.jQuery || document.write('<script src="/js/libs/jquery-1.7.2.min.js"><\\/script>')
