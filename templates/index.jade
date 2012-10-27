@@ -6,7 +6,7 @@ block header
       .grid
         img(id="profile", src="profile.jpg", alt="Kevin Gorski")
         h1 Kevin Gorski
-        h2 Denver, CO software developer
+        h2 Software developer in Denver, CO
 
 block content
   section#intro
@@ -28,10 +28,7 @@ block content
       | . I&rsquo;m interested in entrepreneurship as a way to change the world and perhaps have more control over my life and career, 
       | but I haven&rsquo;t done much with that yet.
     p
-      | Here I try to regularly write in public. Sometimes the subject will be development related, sometimes not. 
-      | If the publish date on this is more than two weeks old, please 
-      a(href='mailto:kevin.gorski@gmail.com') scold me for it
-      | :
+      | Here I try to regularly write in public about software development and more. My latest entry:
 
   section#writing
     - var articles = _.chain(contents.articles._.directories).map(function(item) {
@@ -53,23 +50,14 @@ block content
     p
       | Earlier articles are in   
       a(href='/archive.html') the Archives
-      | . You can even 
+      | . You can also 
       a(href='/feed.xml') subscribe to new articles
       | .
 
 
-  section#mentor
-    h1 Looking for a Mentor
-    p I'm pretty technically adept and I think I could make a living for the  rest of my life with my current skill level and engagement with my day job, but I'm interested in doing more. I don't know with a certainty what that next step is, but I've considered building a business around software that I and a small team make or at least working in a sector (?) where I might have more impact on people's lives or society at large. 
-    p 
-      | These are big questions and I know that ultimately I'll have to answer them for myself, but having someone to discuss them with specifically would do me a lot of good. Is this you? Send me an email and we'll talk: 
-      a(href="mailto:kevin.gorski@gmail.com") kevin.gorski@gmail.com
-
-
-
 block footer
   p 
-    | Still looking for more? Follow up:
+    | Looking for more? Follow up:
   div
     a(href="mailto:kevin.gorski@gmail.com") Email
     |  &middot; 

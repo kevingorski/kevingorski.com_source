@@ -8,20 +8,8 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
-
-/*global jQuery */
-/*!	
-* Lettering.JS 0.6.1
-*
-* Copyright 2010, Dave Rupert http://daverupert.com
-* Released under the WTFPL license 
-* http://sam.zoy.org/wtfpl/
-*
-* Thanks to Paul Irish - http://paulirish.com - for the feedback.
-*
-* Date: Mon Sep 20 17:14:00 2010 -0600
-*/
 (function($){
+/*	Not using Lettering at the moment
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
 		if (a.length) {
@@ -73,5 +61,5 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 		$.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
 		return this;
 	};
-
+*/
 })(jQuery);

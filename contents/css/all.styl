@@ -21,16 +21,31 @@ gutter-width = 12
 
 */
 .wf-loading
-  p, time, li, div, li span
+  h1, h2, h3, .article a, p, time, li, div, li span, abbr[title]
     visibility: hidden
 
 .wf-active
-  p, time, li, div, li span
+  h1, h2, h3
+    font-family "prenton-display"
+    font-weight 100
+
+  .article a, p, time, li, div, li span
     font-family "prenton"
 
+  abbr[title]
+    font-family "ff-basic-gothic-sc-web-pro",sans-serif
+    font-weight 200
+    text-transform lowercase
+
+
 .wf-inactive
-  p, time, li, div, li span
+  h1, h2, h3, .article a, p, time, li, div, li span, abbr[title]
     font-family sans-serif
+  
+  h1, h2, h3, .article a
+    font-weight 100
+
+  p, time, li, div, li span, abbr[title]
     font-size 15px
     line-height 1.6em
 
@@ -66,9 +81,11 @@ h1
 header.home
   h1
     margin 1.25em 0 0
+    line-height 0.9em
 
   h2
     margin 0
+    line-height 1.5em
 
 body > header h1.center
   margin 1em auto
@@ -87,14 +104,14 @@ article.post h1
   width 75px
   border-radius 50%
   float right
-  margin 2.25em 0
+  margin 1.5em 0
 
 #metadata, header.home h2
   display block
   font-size 13px
   margin-bottom 3em
 
-h2, #writing h1, #work h1, #mentor h1
+h2, #writing h1, #work h1
   font-size 25px
   line-height 2em
   margin 0.75em 0 0
@@ -160,24 +177,24 @@ MediumColumns = 8
     padding-right 2*gutter-width px
 
   h1, header.home h1
-    font-size 55px
-    word-spacing -3px
+    font-size 70px
+    margin-left -6px
 
   #profile
     height 150px
     width 150px
+    margin 3.2em 0
 
-  #writing h1, #work h1, #mentor h1, h2
-    font-size 30px
-    word-spacing -2px
+  #writing h1, #work h1, h2, body > header h1
+    font-size 35px
 
-  #writing article.summary h1, h3
+  #writing article.summary h1, header.home h2, h3
     font-size 22px
 
   #metadata
     font-size 14px
 
-  body, p, body > header h1, header.home h2
+  body, p
     font-size 18px
 
   time.publishDate
@@ -260,11 +277,7 @@ RoomyColumns = 10
 */
 
 h1, h2, h3, .article a
-  font-style italic
-  font-weight 300
-  font-family Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif
-  letter-spacing 0
-  color rgb(90, 90, 90)
+  color rgb(85, 85, 85)
   -moz-font-feature-settings 'liga=1'
   -ms-font-feature-settings 'liga' 1
   -webkit-font-feature-settings 'liga' 1
@@ -305,13 +318,13 @@ ol, ul
 li
   color rgb(120, 120, 120)
 
+header.home h2
+  color rgb(110, 110, 110)
+
 abbr[title]
   border none
   text-decoration underline
-  font-family "ff-basic-gothic-sc-web-pro",sans-serif
   font-style normal
-  font-weight 200
-  text-transform lowercase
 
 body
   background-color rgb(50, 50, 50)
@@ -338,8 +351,6 @@ body > footer
     color rgb(200, 100, 100)
 
 blockquote, blockquote:before
-  font-weight 300
-  font-family Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif
   font-style italic
 
 blockquote:before
