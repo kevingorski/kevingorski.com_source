@@ -19,7 +19,7 @@ Rather than lobbying for these tools to handle the code snippet use case, a diff
 When I started working on [Can You Read It Now](http://canyoureaditnow.com) (<abbr title="Can You Read It Now">CYRIN</abbr>) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the <abbr title="Can You Read It Now">CYRIN</abbr> [bookmarklet](http://en.wikipedia.org/wiki/Bookmarklet).
 
 <figure>
-![Example CYRIN scores](scores.png)
+![Example CYRIN scores](./scores.png)
 <figcaption><abbr title="Can You Read It Now">CYRIN</abbr> gives immediate feedback in the current browser window</figcaption>
 </figure>
 
@@ -31,14 +31,14 @@ The source for a lot of the ratings are the <abbr title="World Wide Web Consorti
 <abbr title="Can You Read It Now">CYRIN</abbr> also gives specific recommendations with <abbr title="Cascading Style Sheets">CSS</abbr> rules for making the target design more readable.
 
 <figure>
-![Example CYRIN suggestions](suggestions.png)
+![Example CYRIN suggestions](./suggestions.png)
 <figcaption>Suggestions & <abbr title="Cascading Style Sheets">CSS</abbr></figcaption>
 </figure>
 
 Finally, <abbr title="Can You Read It Now">CYRIN</abbr> also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
 
 <figure>
-![Example CYRIN aspect description](aspect_description.png)
+![Example CYRIN aspect description](./aspect_description.png)
 <figcaption>Description of [line leading](http://en.wikipedia.org/wiki/Leading)</figcaption>
 </figure>
 
