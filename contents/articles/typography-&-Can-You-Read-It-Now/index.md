@@ -1,45 +1,46 @@
 title: Typography & Can You Read It&nbsp;Now?
-date: 2012-09-12 12:00
+date: 2012-11-03 12:00
 template: article.jade
 
-Typography can be a subtle art. Type is in front of us all day in one form or another, but it often takes extreme examples of high- or low-quality typography to [spur](http://www.typographydeconstructed.com/spur/) us to think – or even *care* – about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This can be both enthralling and maddening.
+Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to [spur](http://www.typographydeconstructed.com/spur/) us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
 
 
 ## Productive Frustration
 
-The start of my descent into typographic obsession began innocently enough: by reading a lot. Specifically, reading a lot of software development articles displayed on custom hosting or blog themes. This can lead to some particularly [unreadable](http://en.wikipedia.org/wiki/Readability) text, which is especially frustrating because these are smart and articulate people whose words have to fight through the muddy prism of their own design.
+My entrance into the spiral of typographic concern started innocently enough: by reading a lot of software development articles on the Web. The content is often well-written by smart and articulate people, but the type is usually set in varying degrees of [unreadable](http://en.wikipedia.org/wiki/Readability).
 
-For non-technical content, there are work-arounds for this problem: use [Instapaper](http://instapaper.com), [Readability](http://readability.com), or Safari&rsquo;s Reader feature to arrange the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing the general idea), but software development articles tend to include important accompanying source code (which has different requirements for readability than prose) and screen shots.
+For non-technical content, there are work-arounds for this problem: use [Instapaper](http://instapaper.com), [Readability](http://readability.com), or Safari&rsquo;s Reader feature to set the text in a more readable way and go on with your life. This is great for prose and digital photos (which can usually be resized without losing meaning), but software development articles tend to include accompanying source code (which has different requirements for readability than prose) and detailed screen shots which tend to only be legible at full size.
 
-One way to solve this might be to make affordances in the tools I mentioned for reading code, but I (and probably you) have no control over that, and it&rsquo;s probably more work than it would be worth to the percentage of their audience that has this minor problem.
-
-A different way is to make it easier for these authors to tell if their text is *readable enough* or not, and give them concrete ways to improve its readability. With this guidance the hope is that all of the text in these articles can be made readable enough that a separate tool isn&rsquo;t needed.
+Rather than lobbying for these tools to handle the code snippet use case, a different way to solve the problem is to make it easier for authors to make their text *readable enough* without having to become typography or <abbr title="Cascading Style Sheets">CSS</abbr> expert.
 
 
 ## So I Made A Thing
 
-When I started working on [Can You Read It Now](http://canyoureaditnow.com) (<abbr title="Can You Read It Now">CYRIN</abbr>), I was in the same situation as a lot of people: I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the <abbr title="Can You Read It Now">CYRIN</abbr> [bookmarklet](http://en.wikipedia.org/wiki/Bookmarklet).
+When I started working on [Can You Read It Now](http://canyoureaditnow.com) (<abbr title="Can You Read It Now">CYRIN</abbr>) I could identify readable text, but not the ways that distinguished it from the text that was a challenge to read. Since it was clear that I was not the only one with this problem, I spent some time reading about the basics of typesetting in the browser and applied some of what I learned in the <abbr title="Can You Read It Now">CYRIN</abbr> [bookmarklet](http://en.wikipedia.org/wiki/Bookmarklet).
 
-By making a bookmarklet I was able to take advantage of the user&rsquo;s existing browser rather than building a separate app that would both be a pain for the user (remembering to go to that separate app and bring the URL with) and for me (hosting or paying for a way to render the page somewhere else and then evaluate it). Feedback that's immediate in time & space is powerful.
-
-TODO: Show a screenshot of ratings
-[Caption: Immediate feedback in the current browser window]
-
-You can even check out <abbr title="Can You Read It Now">CYRIN</abbr> for the current page:
-TODO: CYRIN JS
+<figure>
+![Example CYRIN scores](scores.png)
+<figcaption><abbr title="Can You Read It Now">CYRIN</abbr> gives immediate feedback in the current browser window</figcaption>
+</figure>
 
 
 ## What Do I Do With This?
 
-The source for a lot of the ratings are the <abbr title="World Wide Web Consortium">W3C</abbr>&rsquo;s [Web Content Accessibility Guidelines](http://www.w3.org/WAI/intro/wcag.php), which are focused on making content accessible to as many people as possible. Some of the guidelines include formulas for calculating how readable or not text will be, others are more abstract. I&rsquo;ve used the formulae where possible and tried to make clear ratings based on that guidance or personal preference everywhere else. In <abbr title="Can You Read It Now">CYRIN</abbr> higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with low-vision.
+The source for a lot of the ratings are the <abbr title="World Wide Web Consortium">W3C</abbr>&rsquo;s [Web Content Accessibility Guidelines](http://www.w3.org/WAI/intro/wcag.php), which are focused on making content accessible to as many people as possible. I&rsquo;ve used the formulas where they are included with the guidelines for calculating how readable text will be and tried to make clear ratings based on that guidance or personal preference everywhere else. In <abbr title="Can You Read It Now">CYRIN</abbr> higher scores (up to 10) mean that the text will be easier and possible for more people to read your content, but anything rated 7 or above can be good enough if you&rsquo;re not targeting visitors with [low-vision](http://en.wikipedia.org/wiki/Low_vision).
 
-<abbr title="Can You Read It Now">CYRIN</abbr> also gives specific recommendations (including <abbr title="Cascading Style Sheets">CSS</abbr>) for making the target design more readable.
+<abbr title="Can You Read It Now">CYRIN</abbr> also gives specific recommendations with <abbr title="Cascading Style Sheets">CSS</abbr> rules for making the target design more readable.
 
-TODO: EXAMPLE of suggestions & <abbr title="Cascading Style Sheets">CSS</abbr>
+<figure>
+![Example CYRIN suggestions](suggestions.png)
+<figcaption>Suggestions & <abbr title="Cascading Style Sheets">CSS</abbr></figcaption>
+</figure>
 
-Finally, <abbr title="Can You Read It Now">CYRIN</abbr> also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for the use case I&rsquo;ve outlined.
+Finally, <abbr title="Can You Read It Now">CYRIN</abbr> also provides short descriptions of the aspects of typesetting that are being measured. There are more aspects of well-set type than are listed here and more subtlety to determining whether text is readable, but I think it&rsquo;s a good start for beginners and casual practitioners.
 
-TODO: Example description
+<figure>
+![Example CYRIN aspect description](aspect_description.png)
+<figcaption>Description of [line leading](http://en.wikipedia.org/wiki/Leading)</figcaption>
+</figure>
 
 Go ahead, [try it out](http://canyoureaditnow.com).
 
