@@ -369,10 +369,15 @@ body > footer
   a:active
     color rgb(200, 100, 100)
 
-blockquote, blockquote:before
+blockquote p, blockquote:before
   font-style italic
+
+blockquote
+  margin 1.5em 0
 
 blockquote:before
   content "\201C"
-  font-size 3em
-  margin-left -1em
+  position absolute
+  font-size 2.5em
+  line-height 0.5em
+  margin-left -0.85em
