@@ -323,16 +323,21 @@ p, time, li, div, li span
 #author, time.publishDate
   font-style italic
 
-a, a:link, a:visited
+a:link, a:visited
   color rgb(30, 30, 225)
   -webkit-transition color 0.25s ease-in-out
   transition color 0.25s ease-in-out
 
-a:hover
+a[href]:hover
   color rgb(200, 30, 30)
 
-a:active
+a[href]:active
   color rgb(200, 100, 100)
+
+a.section
+  float right
+  font-size 0.75em
+  text-decoration none
 
 ol, ul
   list-style-position outside
