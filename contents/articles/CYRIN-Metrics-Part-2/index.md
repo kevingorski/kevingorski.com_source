@@ -12,7 +12,7 @@ The justification of text describes how it will be aligned to the edges of your 
 
 There are four options for justification, but only two are good choices for body text and only one is feasible with the current state of browser technology. Let me explain.
 
-Centered text is terrible for reading more than a few lines at a time because of it&rsquo;s uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
+Centered text is terrible for reading more than a few lines at a time because of its uneven left edge, making each new line a chore to begin. It can be interesting and artfully used for poetry or a piece with careful art direction, but for readability&rsquo;s sake it usually passes from interesting to distracting.
 
 Right-justified text isn&rsquo;t easy to follow for languages that read left-to-right for much the same reason, even through the right edge is easy enough to find.
 
@@ -30,13 +30,13 @@ If these features improve and are available across browsers this recommendation 
 
 > Creating visual space on the left and right of text will make it easier to visually separate from the rest of the page.
 
-Margin & padding are CSS attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
+Margin & padding are <abbr title="Cascading Style Sheets">CSS</abbr> attributes for creating space around specific elements on the page. By keeping the edges of your text clear from other content, background changes or the edge of the screen you&rsquo;ve prevented your reader from having to fight those distractions to keep focused on your text.
 
 ## Text Color Contrast
 
 > The contrast ratio between the text color and the background color needs to be greater the smaller the text is.
 
-Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the WCAG and hope that&rsquo;s enough to be useful.
+Color contrast enters into theory, mathematics and physiology that I only partially understand. It&rsquo;s big, hairy and complicated, but there&rsquo;s an algorithm to follow, so for now I trust the [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr>][6] and hope that&rsquo;s enough to be useful.
 
 ## Percentage of Text Stylized
 
@@ -55,3 +55,4 @@ Until next time.
 [3]: http://en.wikipedia.org/wiki/River_(typography)
 [4]: http://en.wikipedia.org/wiki/Swash_(typography)
 [5]: http://www.w3.org/TR/html401/struct/text.html#h-9.3.3
+[6]: http://www.w3.org/TR/WCAG/
