@@ -14,4 +14,4 @@ block content
       #metadata
         time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
 
-    section.content!= page.html
+    section.content!= page.html + '<div class="flueron">&#10087;</div>'
