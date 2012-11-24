@@ -1,6 +1,7 @@
 title: CYRIN Metrics Part 2
 date: 2012-11-18 12:00
 template: article.jade
+series: CYRIN
 
 [Continuing][1] our exploration of typographic terminology used by [<abbr title="Can You Read It Now?">CYRIN</abbr>][2] and how its scores are calculated:
 

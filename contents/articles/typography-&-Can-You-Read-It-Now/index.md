@@ -1,6 +1,7 @@
 title: Typography & Can You Read It&nbsp;Now?
 date: 2012-11-03 12:00
 template: article.jade
+series: CYRIN
 
 Typography can be a subtle art. Type is in front of us all day in one form or another, but it can take extreme examples of high- or low-quality typography to [spur](http://www.typographydeconstructed.com/spur/) us to think about type. Like most arts, the more you think about it, the more you notice details, which in turn makes you stop and evaluate what you might have glossed over before. This is both enthralling and maddening.
 

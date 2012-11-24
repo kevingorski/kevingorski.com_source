@@ -152,27 +152,28 @@ body > footer
   padding 3em 0 5em
   text-align center
 
-section.archive
+section.archive, section.series
   margin-top 1em
 
   ol
     list-style none
     padding 0
 
-    ol.articles
-      list-style disc
+  ol.articles
+    list-style disc
 
-    time.publishDate
-      font-size 1em
-      display none
+  time.publishDate
+    font-size 1em
+    display none
 
 img
   max-width 400px
 
 @media screen and (min-width: 450px)
-  section.archive ol time.publishDate
-    display inline
-    margin-right 0.5em
+  section.archive, section.series
+    ol time.publishDate
+      display inline
+      margin-right 0.5em
 
   #writing article.summary
     padding 0 1.4em
@@ -217,11 +218,15 @@ MediumColumns = 8
   time.publishDate
     font-size 14px
 
-  section.archive ol
-    row(6)
+  section.archive, section.series
+    ol
+      row(6)
 
-    .year
-      column(1, 6)
+      .year
+        column(1, 6)
+
+      a
+        display block
 
     ol.articles
       push(1)
@@ -230,9 +235,6 @@ MediumColumns = 8
 
     time.publishDate
       column(2)
-
-    a
-      display block
 
   img
     max-width 560px
@@ -253,15 +255,16 @@ RoomyColumns = 10
     p, time, li, div, li span
       font-size 17px
 
-  section.archive ol
-    row(8)
+  section.archive, section.series
+    ol
+      row(8)
 
-    .year
-      column(1, 8)
+      .year
+        column(1, 8)
 
-    ol.articles
-      push(1)
-      column(7)
+      ol.articles
+        push(1)
+        column(7)
 
   img
     max-width 740px

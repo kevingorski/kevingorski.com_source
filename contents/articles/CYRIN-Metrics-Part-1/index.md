@@ -1,6 +1,7 @@
 title: CYRIN Metrics Part 1
 date: 2012-11-12 12:00
 template: article.jade
+series: CYRIN
 
 Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&rsquo;m going to focus on terms related to readability that are important to understanding why [<abbr title="Can You Read It Now?">CYRIN</abbr>](http://canyoureaditnow.com) recommends what it does, so we can get by with a much smaller set.
 
