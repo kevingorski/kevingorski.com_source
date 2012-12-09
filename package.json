@@ -1,0 +1,11 @@
+{
+  "name": "kg.com",
+  "version": "0.0.1",
+  "description": "just for building",
+  "main": "grunt.js",
+  "dependencies": {
+    "grunt-jquerytransform": "*"
+  },
+  "repository": "",
+  "author": "Kevin Gorski"
+}

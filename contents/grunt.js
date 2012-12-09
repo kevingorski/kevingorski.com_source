@@ -17,11 +17,27 @@ module.exports = function(grunt) {
       css: 'css/styles.css'
     },
     'usemin': {
-      html: '**/*.html'
+      html: ['*.html', 'articles/**/*.html']
+    },
+    'jquerytransform': {
+      files: ['*.html', 'articles/**/*.html'],
+      transform: function($) {
+        // For styling bullet separate from text
+        $('.post li').wrapInner('<span />');
+
+        // Make headings be link-targetable
+        $('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6')
+          .wrapInner(function() {
+            return '<a name="' + $(this).text() + '" />';
+          }).append(function() {
+            return '<a class="section" href="#' + $(this).text() + '">&sect;</a>';
+          });
+      }
     }
   });
 
-  // Default task.
-  grunt.registerTask('default', 'min css rev usemin');
+  grunt.loadNpmTasks('grunt-jquerytransform');
 
+  // Default task.
+  grunt.registerTask('default', 'min css rev usemin jquerytransform');
 };
