@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       files: ['*.html', 'articles/**/*.html'],
       transform: function($) {
         // For styling bullet separate from text
-        $('.post li').wrapInner('<span />');
+        $('.content li').wrapInner('<span />');
 
         // Make headings be link-targetable
         $('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6')
