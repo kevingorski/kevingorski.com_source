@@ -1,9 +1,9 @@
 template: projects-&-portfolio.jade
 exclude: portfolio
 
-Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing .NET web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [Node.js](http://nodejs.org). Both .NET and Node have their advantages, but I&rsquo;m more interested in working with Node in the future.
+Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing .NET web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [node.js](http://nodejs.org). Both .NET and node have their advantages, but I&rsquo;m more interested in working with node in the future.
 
-Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski).
+Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski). I&rsquo;ve also got [a more formal résumé](Kevin%20Gorski%20-%20Resume.pdf) (<abbr title="Portable Document Format">PDF</abbr>) and a [LinkedIn profile](https://www.linkedin.com/in/kevingorski/).
 
 
 ## B-Cycle Admin Site & Infrastructure
@@ -38,19 +38,14 @@ As the primary developer and architect of the central server application and adm
 
 * <span>A feel-good goal for the product: more biking, less driving, and better city living</span>
 * <span>The development team cared about the success and well-being of the project and had many productive discussions about both the software and business</span>
-* <span>Living in Denver, I&rsquo;m constantly reminded of this project when passing a B-Cycle or kiosk</span>
+* <span>I&rsquo;m often reminded of this project when passing a B-Cycle or kiosk</span>
 
 
 ## Lead Management System for HomeAway
 
-Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. <abbr title="Lead Management System">LMS</abbr> is a &ldquo;modular application&rdquo; that tightly integrates into such systems with minimal changes to the existing codebase.
+Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management) is a &ldquo;modular application&rdquo; that tightly integrates into such systems with minimal changes to the existing codebase.
 
-<abbr title="Lead Management System">LMS</abbr> consists of:
-
-* <span><abbr title="User Interface">UI</abbr> bootstrapped by a single JavaScript file</span>
-* <span>.NET WebAPI service for the <abbr title="Lead Management System">LMS</abbr> <abbr title="User Interface">UI</abbr></span>
-* <span>End system-specific web service implementations that are called from the <abbr title="Lead Management System">LMS</abbr> service</span>
-* <span>An email retreival and parsing daemon to associate incoming messages with properties and people in the system</span>
+There are two technical aspects of <abbr title="Lead Management System">LMS</abbr> that make it modular: the <abbr title="User Interface">UI</abbr> that is loaded via JavaScript from a shared location into any of the participating end-systems and the web service that can transparently call end system-specific implementations as necessary.
 
 ### Technologies
 
@@ -63,7 +58,7 @@ Managing vacation rental leads is a manual and unstructured process for many pro
 
 ### My Favorite Parts
 
-* <span>This is one of the most sophisticated and complete JavaScript-based <abbr title="User Interface">UI</abbr>s I&rsquo;ve worked on</span>
+* <span>This is the most complete <abbr title="Single Page App">SPA</abbr> I&rsquo;ve worked on</span>
 * <span>Working with a motivated and talented development team</span>
 
 ## Can You Read It Now?
@@ -74,16 +69,15 @@ Managing vacation rental leads is a manual and unstructured process for many pro
 
 * <span>jQuery</span>
 * <span>Jasmine for testing the core analysis library</span>
-* <span>Readability for finding the main content on a page</span>
-* <span>Node.js for the bookmarklet hosting site and feedback</span>
+* <span>Node.js & MongoDB for the bookmarklet hosting site as well as accepting and responding to feedback</span>
 
 ### My Favorite Parts
 
 * <span>It&rsquo;s a strange kind of fun evaluating specific pages for readability</span>
-* <span>This was one of my first attempts at a non-trivial JavaScript code-base for both client and server</span>
+* <span>This was one of my first attempts at a non-trivial JavaScript codebase for both client and server</span>
 * <span>I made the design for the <abbr title="Can You Read It Now">CYRIN</abbr> homepage and I don&rsquo;t hate it</span>
 
 
 ## TrackBoard
 
-[TrackBoard](https://github.com/kevingorski/TrackBoard) is a browser-based dashboard built with HTML5, CSS3, and JavaScript. You can [see a demo of TrackBoard here](http://kevingorski.github.com/TrackBoard). Many features have been prioritized to maximize the opportunity to combine progressive enhancement and new-at-the-time browser features rather than based upon delivering something immediately useful. The overall goal was to have something more visually pleasing and immediately useful to a development team like the [Panic Status Board](http://www.panic.com/blog/2010/03/the-panic-status-board/). There are other, more complete commercial products in the same vein like [Geckoboard](http://www.geckoboard.com/) that now exist in this space, but I was able to implement a decent set of features by utilizing open source libraries like [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/), which are credited on the project page.
+[TrackBoard](https://github.com/kevingorski/TrackBoard) is a browser-based dashboard built with <abbr title="Hypertext Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3, and JavaScript. You can [see a demo of TrackBoard here](http://kevingorski.github.com/TrackBoard). Many features have been prioritized to maximize the opportunity to combine progressive enhancement and new-at-the-time browser features rather than based upon delivering something immediately useful. The overall goal was to have something more visually pleasing and immediately useful to a development team like the [Panic Status Board](http://www.panic.com/blog/2010/03/the-panic-status-board/). There are other, more complete commercial products in the same vein like [Geckoboard](http://www.geckoboard.com/) that now exist in this space, but I was able to implement a decent set of features by utilizing open source libraries like [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/).
