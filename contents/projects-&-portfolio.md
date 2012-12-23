@@ -1,7 +1,7 @@
 template: projects-&-portfolio.jade
 exclude: portfolio
 
-Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing .NET web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [node.js](http://nodejs.org). Both .NET and node have their advantages, but I&rsquo;m more interested in working with node in the future.
+Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [node.js](http://nodejs.org). Both <span class="caphappy">.NET</span> and node have their advantages, but I&rsquo;m more interested in working with node in the future.
 
 Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski). I&rsquo;ve also got [a more formal résumé](Kevin%20Gorski%20-%20Resume.pdf) (<abbr title="Portable Document Format">PDF</abbr>) and a [LinkedIn profile](https://www.linkedin.com/in/kevingorski/).
 
@@ -26,11 +26,11 @@ As the primary developer and architect of the central server application and adm
 
 ### Technologies
 
-* <span>ASP.NET WebForms</span>
+* <span><span class="caphappy">ASP.NET</span> WebForms</span>
 * <span><abbr title="Windows Communication Foundation">WCF</abbr> for web services</span>
 * <span>NHibernate & Fluent NHibernate</span>
 * <span>Autofac</span>
-* <span>CruiseControl.NET</span>
+* <span>CruiseControl<span class="caphappy">.NET</span></span>
 * <span>jQuery</span>
 * <span>Google Maps <abbr title="Application Programming Interface">API</abbr></span>
 
@@ -52,7 +52,7 @@ There are two technical aspects of <abbr title="Lead Management System">LMS</abb
 * <span>Knockout</span>
 * <span>jQuery</span>
 * <span>ASP.NET MVC</span>
-* <span>.NET Web API</span>
+* <span><span class="caphappy">.NET</span> Web API</span>
 * <span>Entity Framework 5</span>
 * <span>RabbitMQ</span>
 
