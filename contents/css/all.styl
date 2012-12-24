@@ -1,6 +1,5 @@
 @import 'normalize.css'
 @import 'H5BP.css'
-@import 'code.css'
 @import 'grid'
 
 
@@ -21,7 +20,7 @@ gutter-width = 12
 
 */
 .wf-loading
-  h1, h2, h3, .article a, p, time, li, div, li span, abbr[title], .caphappy
+  h1, h2, h3, .article a, p, time, li, li span, abbr[title], .caphappy
     visibility: hidden
 
 .wf-active
@@ -29,7 +28,7 @@ gutter-width = 12
     font-family "prenton-display"
     font-weight 100
 
-  .article a, p, time, li, div, li span
+  .article a, p, time, li, li span
     font-family "prenton"
 
   abbr[title], .caphappy
@@ -39,13 +38,13 @@ gutter-width = 12
 
 
 .wf-inactive
-  h1, h2, h3, .article a, p, time, li, div, li span, abbr[title], .caphappy
+  h1, h2, h3, .article a, p, time, li, li span, abbr[title], .caphappy
     font-family sans-serif
   
   h1, h2, h3, .article a
     font-weight 100
 
-  p, time, li, div, li span, abbr[title], .caphappy
+  p, time, li, li span, abbr[title], .caphappy
     font-size 15px
     line-height 1.6em
 
@@ -147,6 +146,12 @@ figure
 
   img
     box-shadow 2px 2px 5px #aaa, 0 0 5px #ddd
+
+.gist
+  text-align left
+
+  .gist-file .gist-data .data
+    font-size 0.85em
 
 dl, menu, ol, ul
   padding-left 0

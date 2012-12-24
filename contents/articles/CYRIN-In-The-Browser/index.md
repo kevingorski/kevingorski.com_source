@@ -20,23 +20,8 @@ The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access 
 One pain point of building bookmarklets from a development standpoint is that you can't update the code once it's been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like [canyoureaditnow.com][6]).
 
 <figure>
-  <pre>
-```
-<a id="Target" href="javascript:
-  (function(){
-    if(typeof CYRIN=='undefined'
-     ||typeof CYRIN.Bookmarklet=='undefined'){
-
-      document.body.appendChild(document.createElement('script')).src=
-        'http://canyoureaditnow.com/Bookmarklet.js?'+(Math.random())
-
-    } else {
-      CYRIN.Bookmarklet.analyze()
-    }
-  })();">CYRIN?</a>
-```
-  </pre>
-  <figcaption>The <abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet, expanded for readability</figcaption>
+  <script src="https://gist.github.com/4366664.js"></script>
+  <figcaption>The [<abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet](https://gist.github.com/4366664), expanded for readability</figcaption>
 </figure>
 
 
