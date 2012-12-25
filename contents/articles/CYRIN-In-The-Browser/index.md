@@ -17,9 +17,9 @@ Accomplishing all of this with one click from the user required making several d
 
 The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access to the current document would be to add an in-document JavaScript reference on the page to test, but that would mean changing the content of any page you want to rate, which is tedious and unnecessary. A different way to run third-party JavaScript in the context of the current document is a [bookmarklet][1]. As you might be able to gather from the name, bookmarklets are JavaScript that is saved and executed like a bookmark.
 
-One pain point of building bookmarklets from a development standpoint is that you can't update the code once it's been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like [canyoureaditnow.com][6]).
+One pain point of building bookmarklets from a development standpoint is that you can&rsquo;t update the code once it&rsquo;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like [canyoureaditnow.com][6]).
 
-<figure>
+<figure class="codelisting">
   <script src="https://gist.github.com/4366664.js"></script>
   <figcaption>The [<abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet](https://gist.github.com/4366664), expanded for readability</figcaption>
 </figure>

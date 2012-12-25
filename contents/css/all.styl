@@ -201,6 +201,7 @@ MediumColumns = 8
     column (MediumColumns - 1) // getting extra space for padding
     padding-left 2*gutter-width px
     padding-right 2*gutter-width px
+    overflow visible
 
   h1, header.home h1
     font-size 70px
@@ -225,6 +226,11 @@ MediumColumns = 8
 
   time.publishDate
     font-size 14px
+
+  figure.codelisting
+    width 110%
+    position relative
+    left -6%
 
   .gist .gist-file .gist-data .data
       font-size 0.85em
