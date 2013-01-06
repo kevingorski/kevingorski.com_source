@@ -135,17 +135,31 @@ p
 p + p
   text-indent 1.4em
 
-figure
+figure, iframe
   margin 1.5em 0
-  text-align center
   overflow-x scroll
+
+figure
+  text-align center
 
   figcaption
     font-style italic
     margin 0.5em 0
 
+  &>pre, noscript pre
+    text-align left
+    overflow auto
+    background-color #f8f8ff
+    border 1px solid #ddd
+    font-size 0.85em
+    padding 1em
+
   img
     box-shadow 2px 2px 5px #aaa, 0 0 5px #ddd
+
+code
+  color #777
+  font-family Consolas, 'Liberation Mono', Courier, monospace
 
 .gist
   text-align left
@@ -227,13 +241,8 @@ MediumColumns = 8
   time.publishDate
     font-size 14px
 
-  figure.codelisting
-    width 110%
-    position relative
-    left -6%
-
   .gist .gist-file .gist-data .data
-      font-size 0.85em
+    font-size 0.85em
 
 
   section.archive, section.series
@@ -357,10 +366,15 @@ a:link, a:visited
   -webkit-transition color 0.25s ease-in-out
   transition color 0.25s ease-in-out
 
-a[href]:hover
+a:link code, a:visited code
+  color rgb(80, 80, 255)
+  -webkit-transition color 0.25s ease-in-out
+  transition color 0.25s ease-in-out
+
+a[href]:hover, a[href]:hover code
   color rgb(200, 30, 30)
 
-a[href]:active
+a[href]:active, a[href]:active code
   color rgb(200, 100, 100)
 
 a.section

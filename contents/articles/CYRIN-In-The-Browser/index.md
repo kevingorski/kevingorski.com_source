@@ -21,6 +21,27 @@ One pain point of building bookmarklets from a development standpoint is that yo
 
 <figure class="codelisting">
   <script src="https://gist.github.com/4366664.js"></script>
+  <noscript><pre><code>&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
+&lt;a id="Target" href="javascript:
+  // Begin self-executing function
+  (function(){
+  
+    // Check for existing definitions
+    if(typeof CYRIN == 'undefined'
+     ||typeof CYRIN.Bookmarklet == 'undefined'){
+ 
+      // Include updatable script
+      document.body.appendChild(
+        document.createElement('script')
+      ).src = 'http://canyoureaditnow.com/Bookmarklet.js?' + (Math.random())
+ 
+    } else {
+    
+      // Otherwise skip to the analysis step
+      CYRIN.Bookmarklet.analyze()
+      
+    }
+  }());"&gt;CYRIN?&lt;/a&gt;</code></pre></noscript>
   <figcaption>The [<abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet](https://gist.github.com/4366664), expanded for readability</figcaption>
 </figure>
 

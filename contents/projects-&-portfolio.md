@@ -6,7 +6,7 @@ Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doin
 Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski). I&rsquo;ve also got [a more formal résumé](Kevin%20Gorski%20-%20Resume.pdf) (<abbr title="Portable Document Format">PDF</abbr>) and a [LinkedIn profile](https://www.linkedin.com/in/kevingorski/).
 
 
-## B-Cycle Admin Site & Infrastructure
+## <a name="bcycle">B-Cycle Admin Site & Infrastructure</a>
 
 [B-Cycle](http://bcycle.com) was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle sharing system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
 
@@ -41,7 +41,7 @@ As the primary developer and architect of the central server application and adm
 * <span>I&rsquo;m often reminded of this project when passing a B-Cycle or kiosk</span>
 
 
-## Lead Management System for HomeAway
+## <a name="lms">Lead Management System for HomeAway</a>
 
 Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management) is a &ldquo;modular application&rdquo; that tightly integrates into such systems with minimal changes to the existing codebase.
 
@@ -61,7 +61,8 @@ There are two technical aspects of <abbr title="Lead Management System">LMS</abb
 * <span>This is the most complete <abbr title="Single Page App">SPA</abbr> I&rsquo;ve worked on</span>
 * <span>Working with a motivated and talented development team</span>
 
-## Can You Read It Now?
+
+## <a name="cyrin">Can You Read It Now?</a>
 
 [Can You Read It Now](http://canyoureaditnow.com/) (or <abbr title="Can You Read It Now">CYRIN</abbr>) is a two-part project: an [open-source jQuery plug-in](https://github.com/kevingorski/CanYouReadItNow) for analyzing the visual readability of text and [a bookmarklet](http://canyoureaditnow.com/) to help users make specific style changes to improve readability. I wrote it to help me learn about typography, readability, and bookmarklets.
 
@@ -78,6 +79,6 @@ There are two technical aspects of <abbr title="Lead Management System">LMS</abb
 * <span>I made the design for the <abbr title="Can You Read It Now">CYRIN</abbr> homepage and I don&rsquo;t hate it</span>
 
 
-## TrackBoard
+## <a name="trackboard">TrackBoard</a>
 
 [TrackBoard](https://github.com/kevingorski/TrackBoard) is a browser-based dashboard built with <abbr title="Hypertext Markup Language">HTML</abbr>5, <abbr title="Cascading Style Sheets">CSS</abbr>3, and JavaScript. You can [see a demo of TrackBoard here](http://kevingorski.github.com/TrackBoard). Many features have been prioritized to maximize the opportunity to combine progressive enhancement and new-at-the-time browser features rather than based upon delivering something immediately useful. The overall goal was to have something more visually pleasing and immediately useful to a development team like the [Panic Status Board](http://www.panic.com/blog/2010/03/the-panic-status-board/). There are other, more complete commercial products in the same vein like [Geckoboard](http://www.geckoboard.com/) that now exist in this space, but I was able to implement a decent set of features by utilizing open source libraries like [jQuery](http://jquery.com/) and [Modernizr](http://modernizr.com/).
