@@ -43,12 +43,13 @@ block content
         section.content
           time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do, YYYY')
           !{article.intro}
-        p 
-          | &hellip;
-          br
-          a(href=article.url) Continue
+        - if (article.hasMore)
+          p 
+            | &hellip;
+            br
+            a(href=article.url) Continue
     p
-      | Earlier articles are in   
+      | Earlier articles are in 
       a(href='/archive.html') the Archives
       | . You can also 
       a(href='/feed.xml') subscribe to new articles
