@@ -29,8 +29,6 @@ module.exports = function(grunt) {
         $('.content h1, .content h2, .content h3, .content h4, .content h5, .content h6')
           .wrapInner(function() {
             return '<a name="' + $(this).text() + '" />';
-          }).append(function() {
-            return '<a class="section" href="#' + $(this).text() + '">&sect;</a>';
           });
       }
     }
