@@ -40,7 +40,7 @@ gutter-width = 12
 .wf-inactive
   h1, h2, h3, .article a, p, time, li, li span, footer, abbr[title], .caphappy
     font-family sans-serif
-  
+
   h1, h2, h3, .article a
     font-weight 100
 
@@ -50,7 +50,7 @@ gutter-width = 12
 
 
 /*
- 
+
   Size, Proportion & Positioning
 
   3 level structure
@@ -130,7 +130,7 @@ h3
 p
   font-size 16px
   line-height 1.5em
-  margin 0 
+  margin 0
 
 p + p
   text-indent 1.4em
@@ -317,7 +317,7 @@ RoomyColumns = 10
 // ExpansiveColumns = 12
 
 // @media screen and (min-width: 1100px)
-//   .csscolumns 
+//   .csscolumns
 //     .center
 //       width ExpansiveColumns*(column-width + gutter-width) px
 
@@ -340,7 +340,7 @@ RoomyColumns = 10
 
 
 /*
- 
+
   Styles
 
 */
@@ -417,7 +417,7 @@ body > header
   text-align center
   margin-top 1em
 
-body > footer 
+body > footer
   box-shadow: 0 5px 15px #999 inset
 
   a, a:link, a:visited
@@ -443,3 +443,61 @@ blockquote:before
   font-size 2.5em
   line-height 0.5em
   margin-left -0.85em
+
+
+/* Custom Highlight.js Theme */
+pre code
+  .comment,
+  .title
+    color rgb(155, 164, 173)
+
+  .variable,
+  .attribute,
+  .tag,
+  .regexp,
+  .xml .tag .title,
+  .xml .pi,
+  .xml .doctype,
+  .html .doctype,
+  .css .id,
+  .css .class,
+  .css .pseudo
+    color #cc6666
+
+  .params,
+  .constant
+    color rgb(89, 93, 179)
+
+  .number,
+  .preprocessor,
+  .built_in,
+  .literal
+    color rgb(240, 150, 79)
+
+  .class,
+  .css .rules .attribute
+    color #f0c674
+
+  .string,
+  .value,
+  .inheritance,
+  .header,
+  .xml .cdata
+    color rgb(190, 8, 34)
+
+  .css .hexcolor
+    color #8abeb7
+
+  .function,
+  &.javascript .title
+    color rgb(17, 25, 32)
+
+  .keyword,
+  &.javascript .function
+    color rgb(0, 8, 99)
+
+  &.javascript .xml,
+  .xml .javascript,
+  .xml .css,
+  .xml .cdata
+    opacity 0.5

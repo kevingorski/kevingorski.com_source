@@ -3,6 +3,9 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  var hljs = require('highlight.js');
+
+
   // Project configuration.
   grunt.initConfig({
     'min': {
@@ -30,6 +33,15 @@ module.exports = function(grunt) {
           .wrapInner(function() {
             return '<a name="' + $(this).text() + '" />';
           });
+
+        // Syntax highlighting
+        $('.codelisting pre code').replaceWith(function() {
+          var language = $(this).attr('class'),
+            // Sad hack to prevent highlight.js double-encoding entities
+            code = $(this).html().replace(/&amp;/gm, '&').replace(/&lt;/gm, '<').replace(/&gt;/gm, '>');
+
+          return '<code class="' + language + '">' + hljs.highlight(language, code).value + '</code>';
+        });
       }
     }
   });

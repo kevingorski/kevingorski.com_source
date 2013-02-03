@@ -20,28 +20,27 @@ The simplest way to give <abbr title="Can You Read It Now?">CYRIN</abbr> access 
 One pain point of building bookmarklets from a development standpoint is that you can&rsquo;t update the code once it&rsquo;s been saved. This can be mitigated by saving only code to load updatable script from a hosted location (like [canyoureaditnow.com][6]).
 
 <figure class="codelisting">
-  <script src="https://gist.github.com/4366664.js"></script>
-  <noscript><pre><code>&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
+  <pre><code class="xml">&lt;!-- This code would normally be compressed to one line and not include comments --&gt;
 &lt;a id="Target" href="javascript:
   // Begin self-executing function
   (function(){
-  
+
     // Check for existing definitions
     if(typeof CYRIN == 'undefined'
      ||typeof CYRIN.Bookmarklet == 'undefined'){
- 
+
       // Include updatable script
       document.body.appendChild(
         document.createElement('script')
       ).src = 'http://canyoureaditnow.com/Bookmarklet.js?' + (Math.random())
- 
+
     } else {
-    
+
       // Otherwise skip to the analysis step
       CYRIN.Bookmarklet.analyze()
-      
+
     }
-  }());"&gt;CYRIN?&lt;/a&gt;</code></pre></noscript>
+  }());"&gt;CYRIN?&lt;/a&gt;</code></pre>
   <figcaption>The [<abbr title="Can You Read It Now?">CYRIN</abbr> bookmarklet](https://gist.github.com/4366664), expanded for readability</figcaption>
 </figure>
 
@@ -52,7 +51,7 @@ So, now that the JavaScript is running in the right context, how do we find the 
 
 ## Get the displayed style of each piece of text
 
-Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s [css method][5] to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element. 
+Once we&rsquo;ve got a handle to the container of the text to analyze, we can use jQuery&rsquo;s [css method][5] to grab the computed <abbr title="Cascading Style Sheets">CSS</abbr> properties of each element.
 
 ## Calculate ratings for each aspect of readability
 
