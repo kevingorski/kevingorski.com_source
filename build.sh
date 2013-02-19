@@ -8,7 +8,11 @@ wintersmith build
 cp package.json build
 cp -R node_modules/ build/node_modules
 
-h5bp --config build/grunt.js
+pushd build
+
+grunt
+
+popd
 
 rm -rf build/node_modules
 

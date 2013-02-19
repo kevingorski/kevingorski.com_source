@@ -1,28 +1,25 @@
 // use h5bp not grunt
 
+var fs = require('fs'),
+  path = require('path'),
+  hljs = require('highlight.js');
+
 /*global module:false*/
 module.exports = function(grunt) {
 
-  var hljs = require('highlight.js');
 
-
-  // Project configuration.
   grunt.initConfig({
-    'min': {
-      'js/scripts.js': ['js/*.js']
-    },
-    'css': {
+    // pkg: grunt.file.readJSON('package.json'),
+    css: {
       'css/styles.css': ['css/all.css']
     },
-    'uglify': {},
-    'rev': {
-      js: 'js/scripts.js',
+    rev: {
       css: 'css/styles.css'
     },
-    'usemin': {
+    usemin: {
       html: ['*.html', 'articles/**/*.html']
     },
-    'jquerytransform': {
+    jquerytransform: {
       files: ['*.html', 'articles/**/*.html'],
       transform: function($) {
         // For styling bullet separate from text
@@ -47,7 +44,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-jquerytransform');
+  grunt.loadTasks('grunt-tasks');
 
-  // Default task.
-  grunt.registerTask('default', 'min css rev usemin jquerytransform');
+  grunt.registerTask('default', ['css', 'rev', 'usemin', 'jquerytransform']);
 };

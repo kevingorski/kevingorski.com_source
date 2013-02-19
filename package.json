@@ -4,8 +4,12 @@
   "description": "just for building",
   "main": "grunt.js",
   "dependencies": {
+    "highlight.js": "~7.3.0",
+    "grunt": "0.4.0rc8",
     "grunt-jquerytransform": "*",
-    "highlight.js": "~7.3.0"
+    "grunt-lib-contrib": "~0.5.2",
+    "requirejs": "~2.1.4",
+    "clean-css": "~0.10.1"
   },
   "repository": "",
   "author": "Kevin Gorski"
