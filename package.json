@@ -1,15 +1,25 @@
 {
   "name": "kg.com",
   "version": "0.0.1",
-  "description": "just for building",
-  "main": "grunt.js",
+  "description": "Kevin Gorski creates &amp; writes about software",
+  "url": "http://kevingorski.com",
+  "main": "grunt",
   "dependencies": {
     "highlight.js": "~7.3.0",
     "grunt": "0.4.0rc8",
     "grunt-jquerytransform": "*",
     "grunt-lib-contrib": "~0.5.2",
     "requirejs": "~2.1.4",
-    "clean-css": "~0.10.1"
+    "clean-css": "~0.10.1",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-copy": "~0.4.0",
+    "grunt-contrib-jade": "~0.4.0",
+    "js-yaml": "~2.0.2",
+    "moment": "~2.0.0",
+    "marked": "~0.2.8",
+    "grunt-contrib-stylus": "~0.4.1",
+    "grunt-hashres": "~0.3.1"
   },
   "repository": "",
   "author": "Kevin Gorski"

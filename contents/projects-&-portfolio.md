@@ -1,6 +1,7 @@
+---
 template: projects-&-portfolio.jade
 exclude: portfolio
-
+---
 Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doing <span class="caphappy">.NET</span> web development at my day job, but I&rsquo;ve been exploring other languages and environments in my own time. Most of my personal projects are in browser-based JavaScript or [node.js](http://nodejs.org). Both <span class="caphappy">.NET</span> and node have their advantages, but I&rsquo;m more interested in working with node in the future.
 
 Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski). I&rsquo;ve also got [a more formal résumé](Kevin%20Gorski%20-%20Resume.pdf) (<abbr title="Portable Document Format">PDF</abbr>) and a [LinkedIn profile](https://www.linkedin.com/in/kevingorski/).

@@ -7,7 +7,7 @@ html(class='no-js', lang='en')
       link(rel="dns-prefetch", href="//use.typekit.net")
       title
         block title
-          = locals.name
+          = locals.author
       meta(name="description", content=locals.description)
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
@@ -46,18 +46,13 @@ html(class='no-js', lang='en')
             nav
               a.back(href='/') Home
               |  &middot; 
-              - if (!page.metadata.exclude || page.metadata.exclude.indexOf('archive') === -1)
+              - if (!page.exclude || page.exclude.indexOf('archive') === -1)
                 a(href='/archive.html') The&nbsp;Archives
                 |  &middot; 
-              - if (!page.metadata.exclude || page.metadata.exclude.indexOf('portfolio') === -1)
+              - if (!page.exclude || page.exclude.indexOf('portfolio') === -1)
                 a(href='/projects-&-portfolio.html') Projects&nbsp;&amp;&nbsp;Portfolio
                 |  &middot; 
               a(href='/feed.xml') Articles&nbsp;RSS
-
-    //- // build:js /js/scripts.js
-    //- script(src="/js/plugins.js")
-    //- script(src="/js/script.js")
-    //- // endbuild
 
     script
       var _gauges = _gauges || [];

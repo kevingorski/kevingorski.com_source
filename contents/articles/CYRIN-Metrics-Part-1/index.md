@@ -1,7 +1,9 @@
+---
 title: CYRIN Metrics Part 1
 date: 2012-11-12 12:00
 template: article.jade
 series: CYRIN
+---
 
 Typography has a rich history of wide, specific and sometimes confusing terminology. Today I&rsquo;m going to focus on terms related to readability that are important to understanding why [<abbr title="Can You Read It Now?">CYRIN</abbr>](http://canyoureaditnow.com) recommends what it does, so we can get by with a much smaller set.
 
@@ -16,7 +18,7 @@ Font size is probably the most familiar metric I&rsquo;ve included here: it&rsqu
 
 > When line length of text gets too long, it makes text harder to read.
 
-Also called &ldquo;measure,&rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress. 
+Also called &ldquo;measure,&rdquo; optimal line length is laregely a matter of taste, within certain bounds. It&rsquo;s also one of the most overlooked aspect of typesetting by casual web designers, who may leave lines stretching across an entire screen. Long lines make it more difficult to keep your place in a passage of text, but short lines require too much motion as you make progress.
 
 <abbr title="Can You Read It Now?">CYRIN</abbr> only starts to give negative ratings when the text greatly under- or over-shoots the commonly given range of 45-75 characters per single column line. Multi-column designs like those found in print newspapers and magazines can be thinner and readible, but are uncommon on the Web.
 

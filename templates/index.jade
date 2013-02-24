@@ -22,32 +22,27 @@ block content
       |  or my 
       a(href="https://github.com/kevingorski") GitHub profile
       | .
-    p 
+    p
       | Outside of software development, I&rsquo;ve been studying user interface design & typography while listening to a lot of 
       a(href="http://www.rdio.com/people/KevinGorski/") Rdio
-      | . I&rsquo;m interested in entrepreneurship as a way to change the world and perhaps have more control over my life and career, 
+      | . I&rsquo;m interested in entrepreneurship as a way to change the world and perhaps have more control over my life and career,
       | but I haven&rsquo;t done much with that yet.
     p
       | Here I try to regularly write in public about software development and more. My latest attempt:
 
   section#writing
-    - var articles = _.chain(contents.articles._.directories).map(function(item) {
-    -       return item.index
-    -     }).compact().sortBy(function(item) { 
-    -       return -item.date
-    -     }).first(1).value()
-    each article in articles
-      article.summary
-        h1
-          a(href=article.url)!= article.title
-        section.content
-          time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do, YYYY')
-          !{article.intro}
-        - if (article.hasMore)
-          p 
-            | &hellip;
-            br
-            a(href=article.url) Continue
+    - var article = _.first(articles)
+    article.summary
+      h1
+        a(href=article.url)!= article.title
+      section.content
+        time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do, YYYY')
+        !{article.intro}
+      - if (article.hasMore)
+        p
+          | &hellip;
+          br
+          a(href=article.url) Continue
     p
       | Earlier articles are in 
       a(href='/archive.html') the Archives
@@ -57,7 +52,7 @@ block content
 
 
 block footer
-  p 
+  p
     | Looking for more? Follow up:
   div
     a(href="mailto:kevin.gorski@gmail.com") Email

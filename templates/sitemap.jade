@@ -6,7 +6,9 @@ urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9", xmlns:xsi="http://ww
   url
     loc http://kevingorski.com/archive.html
     priority 0.5
-  - var articles = contents.articles._.directories.map(function(item){ return item.index });
+  url
+    loc http://kevingorski.com/projects-&amp;-portfolio.html
+    priority 0.90
   for article in articles
     url
       loc="http://kevingorski.com" + article.url

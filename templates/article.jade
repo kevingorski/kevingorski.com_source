@@ -2,10 +2,10 @@
 extends layout
 
 block prepend title
-  !{page.title} - 
+  !{page.title} -
 
 append head
-  if page.metadata.hasownstyles
+  if page.hasownstyles
     link(rel="stylesheet", href="article.css")
 
 block content
@@ -16,23 +16,21 @@ block content
         time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
         iframe(border=0, scrolling="no", width=78, height=17, allowtransparency=true, frameborder=0,
  style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;",
- src="http://www.instapaper.com/e2?url=" + page.getLocation('http://kevingorski.com') + "&title=" + page.title)
+ src="http://www.instapaper.com/e2?url=" + page.fullUrl + "&title=" + page.title)
 
     section.content!= page.html + '<div class="flueron">&#10087;</div>'
 
-    if page.metadata.series
-      - var articles = _.chain(contents.articles._.directories).map(function(item) {
-      -   return item.index
-      - }).compact().filter(function(item) {
-      -   return item.metadata.series === page.metadata.series
+    if locals.series
+      - var articles = _.chain(locals.listArticles()).filter(function(item) {
+      -   return item.series === series
       - }).sortBy(function(item) {
       -   return item.date
       - }).value()
 
       section.series
         h3
-          | The 
-          em= page.metadata.series
+          | The&nbsp;
+          em= series
           |  Series:
         ol.articles
           each article in articles

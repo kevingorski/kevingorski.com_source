@@ -1,8 +1,7 @@
-
 extends layout
 
 block prepend title
-  !{"The Archives"} - 
+  !{"The Archives"} -
 
 
 block content
@@ -10,24 +9,20 @@ block content
     h1 The Archives
 
   != page.html
-  - var archive = _.chain(contents.articles._.directories).map(function(item) {
-  -   return item.index
-  - }).compact().sortBy(function(item) {
-  -   return -item.date
-  - }).groupBy(function(item) {
-  -   return item.date.getFullYear()
-  - }).value()
-  - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
   section.archive
     ol
+      - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      - var archive = _(articles).groupBy(function(item) {
+      -   return item.date.getFullYear()
+      - })
       each year in _.chain(archive).keys().reverse().value()
         - var months = _.groupBy(archive[year], function(item) { return map[item.date.getMonth()] })
         li
           .year= year
           ol.articles
-            each articles, month in months
-              each article in articles
+            each monthlyArticles, month in months
+              each article in monthlyArticles
                 li.article
                   time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do')
                   a(href=article.url)= article.title

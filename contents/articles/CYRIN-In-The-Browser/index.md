@@ -1,7 +1,9 @@
+---
 title: CYRIN In The Browser
 date: 2012-12-16 12:00
 template: article.jade
 series: CYRIN
+---
 
 In order to rate the readability of text on a web page, Can You Read It Now has to do all of the following:
 
