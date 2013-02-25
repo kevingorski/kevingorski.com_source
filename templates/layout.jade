@@ -46,10 +46,10 @@ html(class='no-js', lang='en')
             nav
               a.back(href='/') Home
               |  &middot; 
-              - if (!page.exclude || page.exclude.indexOf('archive') === -1)
+              - if (!locals.exclude || locals.exclude.indexOf('archive') === -1)
                 a(href='/archive.html') The&nbsp;Archives
                 |  &middot; 
-              - if (!page.exclude || page.exclude.indexOf('portfolio') === -1)
+              - if (!locals.exclude || locals.exclude.indexOf('portfolio') === -1)
                 a(href='/projects-&-portfolio.html') Projects&nbsp;&amp;&nbsp;Portfolio
                 |  &middot; 
               a(href='/feed.xml') Articles&nbsp;RSS

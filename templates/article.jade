@@ -2,7 +2,7 @@
 extends layout
 
 block prepend title
-  !{page.title} -
+  !{page.title} - 
 
 append head
   if page.hasownstyles
@@ -13,10 +13,10 @@ block content
     header
       h1= page.title
       #metadata
-        time.publishDate(datetime=moment(page.date).format('YYYY-MM-DD'))= moment(page.date).format('MMMM Do, YYYY')
+        time.publishDate(datetime=moment(date).format('YYYY-MM-DD'))= moment(date).format('MMMM Do, YYYY')
         iframe(border=0, scrolling="no", width=78, height=17, allowtransparency=true, frameborder=0,
  style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;",
- src="http://www.instapaper.com/e2?url=" + page.fullUrl + "&title=" + page.title)
+ src="http://www.instapaper.com/e2?url=" + fullUrl + "&title=" + page.title)
 
     section.content!= page.html + '<div class="flueron">&#10087;</div>'
 

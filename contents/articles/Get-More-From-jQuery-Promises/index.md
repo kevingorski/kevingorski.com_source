@@ -4,7 +4,7 @@ date: 2013-01-05 12:00
 template: article.jade
 ---
 
-[Promises and deferred objects][3] were introduced to jQuery way back in [version 1.5][2] as part of a re-write of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> module. I&rsquo;ve only started using them in earnest in the past few months while building [<abbr title="Lead Management System">LMS</abbr>][5], but they&rsquo;ve become essential to keeping asynchronous code readable and maintainable. There are already [a lot][1] [of resources][4] available on this subject, but here I&rsquo;ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery&rsquo;s promise implementation.
+Intro: [Promises and deferred objects][3] were introduced to jQuery way back in [version 1.5][2] as part of a re-write of the <abbr title="Asynchronous JavaScript and XML">AJAX</abbr> module. I&rsquo;ve only started using them in earnest in the past few months while building [<abbr title="Lead Management System">LMS</abbr>][5], but they&rsquo;ve become essential to keeping asynchronous code readable and maintainable. There are already [a lot][1] [of resources][4] available on this subject, but here I&rsquo;ve included all of the useful details I picked up from different places while learning the ins and outs of using jQuery&rsquo;s promise implementation.
 
 
 ## What Is A Promise Worth?

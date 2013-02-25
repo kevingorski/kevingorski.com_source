@@ -8,18 +8,37 @@ var fs = require('fs'),
 
 /*global module:false*/
 module.exports = function(grunt) {
-  var pkg = grunt.file.readJSON('package.json');
-
-  marked.inlineLexer.formatUrl = function(uri) {
-    return (url.parse(uri).protocol == undefined)
-      ? url.resolve(pkg.url, uri)
-      : uri;
-  }
+  var pkg = grunt.file.readJSON('package.json'),
+    oldOutputLink = marked.InlineLexer.prototype.outputLink,
+    baseUrl = pkg.url,
+    markedLexer;
 
   marked.setOptions({
     gfm: true,
     breaks: false
   });
+
+  marked.InlineLexer.prototype.outputLink = function(cap, link) {
+    link.href = formatUrl(link.href);
+
+    return oldOutputLink.call(this, cap, link);
+  }
+
+  markedLexer = new marked.Lexer();
+
+  function formatUrl(uri) {
+    return (url.parse(uri).protocol == undefined)
+      ? url.resolve(baseUrl, uri)
+      : uri;
+  }
+
+  function translateMarkdown(md, base) {
+    baseUrl = base || pkg.url;
+
+    var tokens = markedLexer.lex(md);
+
+    return marked.parser(tokens);
+  }
 
 
   function labotomize(content) {
@@ -50,7 +69,7 @@ module.exports = function(grunt) {
           name: path.basename(topLevelPage, '.md'),
           path: topLevelPage,
           page: {
-            html: marked(doc.markdown)
+            html: translateMarkdown(doc.markdown)
           }
         });
       }),
@@ -61,7 +80,8 @@ module.exports = function(grunt) {
           doc = labotomize(content),
           date = new Date(doc.metadata.date),
           relativeUrl = '/articles/' + articleDirectory + '/',
-          html = marked(doc.markdown),
+          fullUrl = url.resolve(pkg.url, relativeUrl),
+          html = translateMarkdown(doc.markdown, fullUrl),
           breakpoint = html.indexOf('<span class="more') || html.indexOf('<h2') || html.indexOf('<hr'),
           intro = html,
           hasMore = false;
@@ -81,7 +101,7 @@ module.exports = function(grunt) {
             title: doc.metadata.title
           },
           url: relativeUrl,
-          fullUrl: url.resolve(pkg.url, relativeUrl)
+          fullUrl: fullUrl
         });
       })
       .sortBy(function(item) {
@@ -97,13 +117,18 @@ module.exports = function(grunt) {
 
     files['build/' + page.name + '.html'] = ['templates/' + page.template ];
 
+    _.defaults(page,
+      pkg,
+      {
+        articles: articles,
+        _: _,
+        moment: moment
+      });
+
     jadeTarget[page.name] = {
       options: {
-        data: _.extend(page, {
-          articles: articles,
-          _: _,
-          moment: moment
-        })
+        pretty: true,
+        data: page
       },
       files: files
     };
@@ -114,15 +139,20 @@ module.exports = function(grunt) {
 
     files['build/articles/' + article.path + '/index.html'] = ['templates/' + article.template ];
 
+    _.defaults(article,
+      pkg,
+      {
+        _: _,
+        moment: moment,
+        listArticles: function() {
+          return articles;
+        }
+      });
+
     jadeTarget[article.path] = {
       options: {
-        data: _.extend(article, {
-          _: _,
-          moment: moment,
-          listArticles: function() {
-            return articles;
-          }
-        })
+        pretty: true,
+        data: article
       },
       files: files
     };
@@ -130,18 +160,20 @@ module.exports = function(grunt) {
 
   _.forEach(grunt.file.expand({ cwd: 'contents', filter: 'isFile' }, '*.json'), function(jsonFile) {
     var obj = grunt.file.readJSON(path.resolve('./contents') + '/' + jsonFile),
-      files = {};
+      files = {},
+      jsonPage = _.defaults({
+          articles: articles,
+          _: _,
+          moment: moment
+        },
+        pkg);
 
     files['build/' + obj.filename ] = ['templates/' + obj.template ];
 
     jadeTarget[jsonFile] = {
       options: {
         pretty: true,
-        data: _.extend(pkg, {
-          articles: articles,
-          _: _,
-          moment: moment
-        })
+        data: jsonPage
       },
       files: files
     };
@@ -155,7 +187,7 @@ module.exports = function(grunt) {
     copy: {
       default: {
         files: [
-          { expand: true, cwd: 'contents/', src: ['**/*.pdf', '**/*.jpg', '**/*.png'], dest: 'build/' },
+          { expand: true, cwd: 'contents/', src: ['CNAME', '**/*.pdf', '**/*.jpg', '**/*.png'], dest: 'build/' },
           { expand: true, cwd: 'contents/js/', src: ['**'], dest: 'build/js/' }
         ]
       }
@@ -194,11 +226,8 @@ module.exports = function(grunt) {
             // Sad hack to prevent highlight.js double-encoding entities
             code = $this.html().replace(/&amp;/gm, '&').replace(/&lt;/gm, '<').replace(/&gt;/gm, '>');
 
-          console.log(language, code);
-
           return '<code class="' + language + '">' + hljs.highlight(language, code).value + '</code>';
         });
-        console.log('replaced');
       }
     },
 
@@ -215,13 +244,17 @@ module.exports = function(grunt) {
     },
 
     // Meta
-    watch: {
+    regarde: {
       contents: {
-        files: [ 'contents/**'],
+        files: 'contents/**',
+        events: false,
+        spawn: true,
         tasks: [ 'default' ]
       }, 
       jadeTemplates: {
         files: 'templates/*.jade',
+        events: false,
+        spawn: true,
         tasks: [ 'jade' ]
       }
     }
@@ -231,10 +264,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-stylus');
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-hashres');
   grunt.loadNpmTasks('grunt-jquerytransform');
-
+  grunt.loadNpmTasks('grunt-regarde');
 
   grunt.registerTask('default', ['clean', 'copy', 'jade', 'stylus', 'hashres', 'jquerytransform']);
+  grunt.registerTask('dev', ['default', 'regarde']);
 };
