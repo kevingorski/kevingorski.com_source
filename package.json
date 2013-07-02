@@ -6,7 +6,7 @@
   "main": "grunt",
   "dependencies": {
     "highlight.js": "~7.3.0",
-    "grunt": "0.4.0rc8",
+    "grunt": "0.4.1",
     "grunt-jquerytransform": "*",
     "grunt-lib-contrib": "~0.5.2",
     "requirejs": "~2.1.4",
