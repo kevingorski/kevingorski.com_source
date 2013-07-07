@@ -190,6 +190,11 @@ module.exports = function(grunt) {
           { expand: true, cwd: 'contents/', src: ['CNAME', '**/*.pdf', '**/*.jpg', '**/*.png'], dest: 'build/' },
           { expand: true, cwd: 'contents/js/', src: ['**'], dest: 'build/js/' }
         ]
+      },
+      newArticle: {
+        files: [
+          { expand: true, cwd: 'contents/templates/article/', src: ['*'], dest: 'contents/articles/New-Article/' }
+        ]
       }
     },
     jade: jadeTarget,
@@ -268,6 +273,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jquerytransform');
   grunt.loadNpmTasks('grunt-regarde');
 
-  grunt.registerTask('default', ['clean', 'copy', 'jade', 'stylus', 'hashres', 'jquerytransform']);
+  grunt.registerTask('default', ['clean', 'copy:default', 'jade', 'stylus', 'hashres', 'jquerytransform']);
   grunt.registerTask('dev', ['default', 'regarde']);
+  grunt.registerTask('newArticle', 'copy:newArticle');
 };
