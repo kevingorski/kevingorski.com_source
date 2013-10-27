@@ -7,6 +7,30 @@ Since getting my Computer Science degree in 2004, I&rsquo;ve primarily been doin
 Here are some cherry-picked examples of projects I&rsquo;ve worked on in the past that you might find interesting. If you&rsquo;re more of a code person, my personal projects are all on [GitHub](https://github.com/kevingorski). I&rsquo;ve also got [a more formal résumé](Kevin%20Gorski%20-%20Resume.pdf) (<abbr title="Portable Document Format">PDF</abbr>) and a [LinkedIn profile](https://www.linkedin.com/in/kevingorski/).
 
 
+## <a name="rezgrid">LMS and RezGrid Modules for [<abbr title="HomeAway Software for Professionals">HASP</abbr>](http://software.homeaway.com/)</a>
+
+At <abbr title="HomeAway Software for Professionals">HASP</abbr>, we develop for and support several similar, but separate software systems for property managers. Instead of building significant new features in each of the systems separately, some are built as "modules" and are loaded into each of the systems after being built once. This saves initial development time, increases consistency, and introduces some interesting design problems. I've worked on two modules as part of the modular team.
+
+The first modular application was [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management), which helps property management companies track inquiries about their properties with realtime availability, templated messaging, and reporting. For many property managers this replaces a paper-based inquiry management process, which can be slow, error-prone, and difficult to share among different reservationists.
+
+The second web-based modular application is the new reservation grid. Over time, many different grids and availability visualizations have been built into property management software, including those in the <abbr title="HomeAway Software for Professionals">HASP</abbr> product portfolio. This reservation grid was meant to combine some of the most useful features from those products with modern HomeAway design sensibility and make the result a module. The RezGrid visualizes unit availability with customizable unit and reservation information, searches units with advanced filters, books new reservations, and displays unit and reservation details.
+
+### Technologies
+
+* <span>Knockout</span>
+* <span>jQuery</span>
+* <span>Moment.js</span>
+* <span>SVG</span>
+* <span><span class="caphappy">.NET</span> Web API</span>
+* <span>Entity Framework 5</span>
+
+### My Favorite Parts
+
+* <span>Working with a motivated and talented development team</span>
+* <span>Knockout has been a lot of fun to work with and has been able to handle all we&rsquo;ve wanted to do with it</span> 
+* <span>Building a backwards-compatible API translation layer was challenging, but worthwhile</span>
+
+
 ## <a name="bcycle">B-Cycle Admin Site & Infrastructure</a>
 
 [B-Cycle](http://bcycle.com) was in a prototypical phase when we started working with them to build what would be the first production version of their automated bicycle sharing system. This project was technically interesting because it required multiple physically and logically separated systems to act in concert to provide a responsive end-user experience and an information rich administration system.
@@ -40,27 +64,6 @@ As the primary developer and architect of the central server application and adm
 * <span>A feel-good goal for the product: more biking, less driving, and better city living</span>
 * <span>The development team cared about the success and well-being of the project and had many productive discussions about both the software and business</span>
 * <span>I&rsquo;m often reminded of this project when passing a B-Cycle or kiosk</span>
-
-
-## <a name="lms">Lead Management System for HomeAway</a>
-
-Managing vacation rental leads is a manual and unstructured process for many property managment companies, even if they use software to manage availability and the booking process. [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management) is a &ldquo;modular application&rdquo; that tightly integrates into such systems with minimal changes to the existing codebase.
-
-There are two technical aspects of <abbr title="Lead Management System">LMS</abbr> that make it modular: the <abbr title="User Interface">UI</abbr> that is loaded via JavaScript from a shared location into any of the participating end-systems and the web service that can transparently call end system-specific implementations as necessary.
-
-### Technologies
-
-* <span>Knockout</span>
-* <span>jQuery</span>
-* <span>ASP.NET MVC</span>
-* <span><span class="caphappy">.NET</span> Web API</span>
-* <span>Entity Framework 5</span>
-* <span>RabbitMQ</span>
-
-### My Favorite Parts
-
-* <span>This is the most complete <abbr title="Single Page App">SPA</abbr> I&rsquo;ve worked on</span>
-* <span>Working with a motivated and talented development team</span>
 
 
 ## <a name="cyrin">Can You Read It Now?</a>
