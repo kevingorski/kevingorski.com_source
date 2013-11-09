@@ -15,7 +15,7 @@ rss(version='2.0',
     for article in articles
       - var permalink = locals.url + article.url
       item
-        title= article.title.replace(/&(?!amp)(\w+;)/gi, '&amp;$1')
+        title= article.title.replace(/&(?!amp|lt|gt|quot)(\w+;)/gi, ' ')
         link= permalink
         pubDate= moment(article.date).format('ddd, DD MMM YYYY HH:mm:ss ZZ')
         guid(isPermaLink='true')= permalink
