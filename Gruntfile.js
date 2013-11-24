@@ -261,6 +261,19 @@ module.exports = function(grunt) {
         events: false,
         spawn: true,
         tasks: [ 'jade' ]
+      },
+    },
+
+    bgShell: {
+      serve: {
+        cmd: 'serve build/',
+        bg: true
+      },
+      review: {
+        cmd: 'sleep 2 && review -s \'{ "homepage":"http://localhost:3000/", "archive":"http://localhost:3000/archive.html", "images":"http://localhost:3000/articles/typography-&-Can-You-Read-It-Now/", "code":"http://localhost:3000/articles/CYRIN-In-The-Browser/" }\' -r \'["320x480", "480x320", "768x1024", "1024x768", "1200x800"]\' -w 3000 -p 4000',
+      },
+      viewReview: {
+        cmd: 'open http://localhost:4000/'
       }
     }
   });
@@ -272,8 +285,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-hashres');
   grunt.loadNpmTasks('grunt-jquerytransform');
   grunt.loadNpmTasks('grunt-regarde');
+  grunt.loadNpmTasks('grunt-bg-shell');
 
   grunt.registerTask('default', ['clean', 'copy:default', 'jade', 'stylus', 'hashres', 'jquerytransform']);
+  grunt.registerTask('review', 'bgShell');
   grunt.registerTask('dev', ['default', 'regarde']);
   grunt.registerTask('newArticle', 'copy:newArticle');
 };

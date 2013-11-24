@@ -25,5 +25,9 @@
     "grunt-regarde": "~0.1.1"
   },
   "repository": "",
-  "author": "Kevin Gorski"
+  "author": "Kevin Gorski",
+  "devDependencies": {
+    "grunt-shell": "~0.6.1",
+    "grunt-bg-shell": "~2.3.1"
+  }
 }
