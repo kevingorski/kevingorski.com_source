@@ -27,7 +27,7 @@ block content
       -   return item.date
       - }).value()
 
-      section.series
+      section.series.clearfix
         h3
           | The&nbsp;
           em= series
@@ -35,8 +35,24 @@ block content
         ol.articles
           each article in articles
             li.article
-              time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMMM Do')
+              time.publishDate(datetime=moment(article.date).format('YYYY-MM-DD'))= moment(article.date).format('MMM. Do, YYYY')
               if article.title === page.title
                 span= article.title
               else
                 a(href=article.url)= article.title
+
+    section.surrounding
+      if locals.prev
+        section.clearfix
+          h3 Previous
+          ol.articles.clearfix
+            li.article
+              time.publishDate(datetime=moment(locals.prev.date).format('YYYY-MM-DD'))= moment(locals.prev.date).format('MMM. Do, YYYY')
+              a.prev(href=locals.prev.url)= locals.prev.title
+      if locals.next
+        section.clearfix
+          h3 Next
+          ol.articles.clearfix
+            li.article
+              time.publishDate(datetime=moment(locals.next.date).format('YYYY-MM-DD'))= moment(locals.next.date).format('MMM. Do, YYYY')
+              a.next(href=locals.next.url)= locals.next.title

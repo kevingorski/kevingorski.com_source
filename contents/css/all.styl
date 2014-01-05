@@ -197,7 +197,7 @@ body > footer
   padding 3em 0 5em
   text-align center
 
-section.archive, section.series
+section.archive, section.series, section.surrounding
   margin-top 1em
 
   ol
@@ -211,6 +211,9 @@ section.archive, section.series
     font-size 1em
     display none
 
+section.surrounding section:first-of-type h3
+  margin-top 0
+
 img
   max-width 400px
 
@@ -221,7 +224,7 @@ iframe.playlist
   width 250px
 
 @media screen and (min-width: 450px)
-  section.archive, section.series
+  section.archive, section.series, section.surrounding
     ol time.publishDate
       display inline
       margin-right 0.5em
@@ -282,7 +285,7 @@ MediumColumns = 8
     font-size 0.85em
 
 
-  section.archive, section.series
+  section.archive, section.series, section.surrounding
     ol
       row(6)
 
@@ -327,7 +330,7 @@ RoomyColumns = 10
     p, time, li, div, li span
       font-size 17px
 
-  section.archive, section.series
+  section.archive, section.series, section.surrounding
     ol
       row(8)
 

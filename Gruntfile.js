@@ -59,6 +59,15 @@ module.exports = function(grunt) {
     };
   }
 
+  function getArticleSummary(metadata) {
+
+    return {
+      date: metadata.date,
+      title: metadata.page.title,
+      url: metadata.url
+    }
+  }
+
   var _ = grunt.util._,
     topLevelPages = _(grunt.file.expand({ cwd: 'contents', filter: 'isFile' }, '*.md'))
       .map(function (topLevelPage) {
@@ -106,6 +115,15 @@ module.exports = function(grunt) {
       })
       .sortBy(function(item) {
         return -item.date
+      })
+      .each(function(item, index, list) {
+        if(index > 0) {
+          item.next = getArticleSummary(list[index - 1]);
+        }
+
+        if(index < list.length - 1) {
+          item.prev = getArticleSummary(list[index + 1]);
+        }
       })
       .value();
 
