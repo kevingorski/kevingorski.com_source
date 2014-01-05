@@ -75,17 +75,17 @@ h1
   font-size 32px
   line-height 1.15em
 
+body > header h1
+  margin .67em 0 0
+
 header.home
   h1
-    margin 1.25em 0 0
+    margin 1em 0 0
     line-height 0.9em
 
   h2
     margin 0
     line-height 1.5em
-
-body > header h1.center
-  margin 1em auto
 
 #intro
   padding-top 2em
@@ -103,13 +103,16 @@ article.post h1
   float right
   margin 1.5em 0
 
-#metadata, header.home h2
+#metadata, header.home h2, header.home nav
   display block
   font-size 13px
-  margin-bottom 3em
+
+header.home nav
+  font-size 11px
 
 #metadata iframe
   float right
+  margin-top 0
 
 h2, #writing h1, #work h1
   font-size 25px
@@ -168,6 +171,28 @@ code
 dl, menu, ol, ul
   padding-left 0
 
+.rss
+  display none
+
+header.home nav .home
+  display none
+
+nav 
+  text-align center
+  margin-bottom 1em
+
+  header &
+    text-align left
+
+    ul
+      margin 0
+
+    a, a:link
+      color rgb(110, 110, 110)
+
+  ul, li
+    display inline-block
+
 body > footer
   padding 3em 0 5em
   text-align center
@@ -223,12 +248,20 @@ MediumColumns = 8
 
   h1, header.home h1
     font-size 70px
-    margin-left -6px
 
   #profile
     height 150px
     width 150px
     margin 3.2em 0
+
+  header.home nav 
+    font-size 14px
+
+  .rss
+    display inline-block
+
+  footer nav li.home
+    display inline-block
 
   #writing h1, #work h1, h2, body > header h1
     font-size 35px

@@ -31,8 +31,11 @@ html(class='no-js', lang='en')
 
     block header
       header.clearfix
-        h1.center
-          a.grid(href="/") Kevin Gorski
+        .center
+          .grid
+            h1
+              a(href="/") Kevin Gorski
+            include navigation
 
     #content(role="main").clearfix
       .center
@@ -43,16 +46,7 @@ html(class='no-js', lang='en')
       .center
         .grid
           block footer
-            nav
-              a.back(href='/') Home
-              |  &middot; 
-              - if (!locals.exclude || locals.exclude.indexOf('archive') === -1)
-                a(href='/archive.html') The&nbsp;Archives
-                |  &middot; 
-              - if (!locals.exclude || locals.exclude.indexOf('portfolio') === -1)
-                a(href='/projects-&-portfolio.html') Projects&nbsp;&amp;&nbsp;Portfolio
-                |  &middot; 
-              a(href='/feed.xml') Articles&nbsp;RSS
+            include navigation
 
     script
       var _gaq = _gaq || [];
