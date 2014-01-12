@@ -1,3 +1,21 @@
+mixin navigation(exclude, header)
+  - var allLinks = [ { id: 'home', name: 'Home', href: '/' }, { id: 'archive', name: 'Writing', href: '/archive.html'}, { id: 'portfolio', name: 'Projects&nbsp;&amp;&nbsp;Portfolio', href: '/projects-&-portfolio.html'}, { id: 'rss', name: 'RSS', href: '/feed.xml' }]
+  - if(header) {
+  -   exclude = (!exclude) ? [] : (exclude.prototype === Array.prototype) ? exclude : [exclude];
+  -   exclude.push('home'); 
+  - }
+  - var filteredLinks = _.chain(allLinks).filter(function(link) {
+  -   return !exclude || exclude.indexOf(link.id) === -1
+  - }).value()
+  nav
+    ul
+      each link, index in filteredLinks
+        li
+          - if (index > 0)
+             &middot; 
+          a(href=link.href)=link.name
+
+
 !!! 5
 html(class='no-js', lang='en')
   head
@@ -35,7 +53,7 @@ html(class='no-js', lang='en')
           .grid
             h1
               a(href="/") Kevin Gorski
-            include navigation
+            +navigation(locals.exclude, true)
 
     #content(role="main").clearfix
       .center
@@ -46,7 +64,7 @@ html(class='no-js', lang='en')
       .center
         .grid
           block footer
-            include navigation
+            +navigation(locals.exclude)
 
     script
       var _gaq = _gaq || [];
