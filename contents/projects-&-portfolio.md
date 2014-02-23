@@ -9,11 +9,14 @@ Here are some cherry-picked examples of projects I&rsquo;ve worked on in the pas
 
 ## <a name="rezgrid">LMS and RezGrid Modules for [HomeAway Software](http://software.homeaway.com/)</a>
 
-At HomeAway Software we develop for and support several similar, but separate software systems for property managers. Instead of building significant new features in each of the systems separately, some are built as &ldquo;modules&rdquo; and are loaded into each of the systems after being built once. This saves initial development time, increases consistency, and introduces some interesting design problems. I've worked on two modules as part of the modular team.
+At HomeAway Software we develop for and support several similar, but separate software systems for property managers. Instead of building significant new features in each of the systems separately, some are built once as &ldquo;modules&rdquo; and loaded into each system. This saves initial development time, increases consistency, and introduces some interesting design problems. I&rsquo;ve worked on two modules as part of the modular team.
 
-The first modular application was [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management), which helps property management companies track inquiries about their properties with realtime availability, templated messaging, and reporting. For many property managers this replaces a paper-based inquiry management process, which can be slow, error-prone, and difficult to share among different reservationists.
+The first modular application was [<abbr title="Lead Management System">LMS</abbr>](http://software.homeaway.com/vacation-rentals/products/lead-management), which helps property management companies track inquiries about their properties with realtime availability, templated messaging, and reporting. For many property managers this replaces a paper-based inquiry management process, which can be slow, error-prone, and difficult to share among multiple reservationists.
 
-The second web-based modular application is the new reservation grid. Over time, many different grids and availability visualizations have been built into property management software, including those in the HomeAway Software product portfolio. This reservation grid was meant to combine some of the most useful features from those products with modern HomeAway design sensibility and make the result a module. The RezGrid visualizes unit availability with customizable unit and reservation information, searches units with advanced filters, books new reservations, and displays unit and reservation details.
+The second web-based modular application is a reservation grid. Over time, many different grids and availability visualizations have been built into property management software, including those in the HomeAway Software product portfolio. This reservation grid was meant to combine some of the most useful features from those products with modern HomeAway design sensibility and make the result a module. The RezGrid visualizes unit availability with customizable unit and reservation information, searches units with advanced filters, books new reservations, and displays unit and reservation details.
+
+In order to remove the need to update both end systems and modules at the same time, each end system&rsquo;s Dragoman service is versioned and modules communicate via a re-useable client which can translate messages between major versions.
+
 
 ### Technologies
 
