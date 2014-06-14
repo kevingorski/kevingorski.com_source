@@ -52,13 +52,13 @@ block content
       | .
 
 
-prepend footer
+block footer
   - var locals = {exclude: ['home']};
   p
     | Looking for more? Follow up:
-  div
+  div.contact
     a(href="mailto:kevin.gorski@gmail.com") Email
-    |  &middot; 
+    .spacer &middot; 
     a(href="https://github.com/kevingorski", rel="me") GitHub
-    |  &middot; 
+    .spacer &middot; 
     a(href="http://linkedin.com/in/kevingorski", rel="me") LinkedIn

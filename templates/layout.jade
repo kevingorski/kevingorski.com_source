@@ -1,5 +1,5 @@
 mixin navigation(exclude, header)
-  - var allLinks = [ { id: 'home', name: 'Home', href: '/' }, { id: 'archive', name: 'Writing', href: '/archive.html'}, { id: 'portfolio', name: 'Projects&nbsp;&amp;&nbsp;Portfolio', href: '/projects-&-portfolio.html'}, { id: 'rss', name: 'RSS', href: '/feed.xml' }]
+  - var allLinks = [ { id: 'home', name: 'Home', href: '/' }, { id: 'archive', name: 'Writing', href: '/archive.html'}, { id: 'portfolio', name: 'Projects', href: '/projects-&-portfolio.html'}, { id: 'rss', name: 'RSS', href: '/feed.xml' }]
   - if(header) {
   -   exclude = (!exclude) ? [] : (exclude.prototype === Array.prototype) ? exclude : [exclude];
   -   exclude.push('home'); 
@@ -12,7 +12,7 @@ mixin navigation(exclude, header)
       each link, index in filteredLinks
         li
           - if (index > 0)
-             &middot; 
+            .spacer &middot; 
           a(href=link.href)=link.name
 
 
