@@ -1,8 +1,8 @@
 ---
-title: Load-bearing JavaScript - Name Every Function
+title: Name Every Function
 date: 2014-07-20 14:30
 template: article.jade
-series: Load-bearing JavaScript
+series: It&rsquo;s Just JavaScript
 ---
 
 When writing non-trivial, maintainable JavaScript, I&rsquo;ve found that there are some simple guidelines which can improve the development experience. The first of these is:
@@ -82,4 +82,4 @@ This works because of a feature/behavior of JavaScript called function-hoisting,
 
 Separating the public interface from the implementation details like this is a matter of taste, but I find it more readable.
 
-That&rsquo;s it for the first item in *Load-bearing JavaScript*, I hope you&rsquo;ve found it helpful!
+That&rsquo;s it for now, I hope you&rsquo;ve found it helpful!

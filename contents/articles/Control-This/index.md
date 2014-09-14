@@ -1,8 +1,8 @@
 ---
-title: Load-bearing JavaScript - Control "this"
+title: Control &ldquo;this&rdquo;
 date: 2014-08-18 20:55
 template: article.jade
-series: Load-bearing JavaScript
+series: It&rsquo;s Just JavaScript
 ---
 
 >>> Master the &ldquo;this&rdquo; keyword
